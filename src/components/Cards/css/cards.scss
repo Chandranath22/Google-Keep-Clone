@@ -1,0 +1,136 @@
+.cards-light {
+    background: white;
+    width: 95%;
+    height: auto;
+    margin-left: 2.5%;
+    margin-top: 5%;
+    border-radius: 10px;
+    box-shadow: 0 0 2px #9e9e9e ;
+
+    .card-box {
+
+        .card-title {
+            display: flex;
+            width: 95%;
+            height: 40px;
+            color: #212121;
+            background: transparent;
+            margin-left: 2.5%;
+            margin-bottom: 20px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        ::placeholder {
+            color: #9e9e9e  ;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+    }
+
+    .details {
+
+        .card-details {
+            display: flex;
+            width: 95%;
+            color: #212121;
+            background: transparent;
+            margin-left: 2.5%;
+            border: none;
+            overflow: auto;
+            font-size: 1rem;
+            z-index: 50;  
+            outline: none;
+            margin-bottom: 10px;
+            resize: none;
+        }
+
+        ::placeholder {
+            color: #9e9e9e  ;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+
+    .more-options {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 24px;
+
+        .more-ver {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+//dark mode ----------------------------------------------------------------------------
+
+.cards-dark {
+    background: #212121;
+    width: 95%;
+    height: auto;
+    margin-left: 2.5%;
+    margin-top: 5%;
+    border-radius: 10px;
+    box-shadow: 0 0 2px #9e9e9e ;
+
+    .card-box {
+
+        .card-title {
+            display: flex;
+            width: 95%;
+            height: 40px;
+            color: white;
+            background: transparent;
+            margin-left: 2.5%;
+            margin-bottom: 20px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        ::placeholder {
+            color: #9e9e9e  ;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+    }
+
+    .details {
+
+        .card-details {
+            display: flex;
+            width: 95%;
+            color: white;
+            background: transparent;
+            margin-left: 2.5%;
+            border: none;
+            overflow: auto;
+            font-size: 1rem;
+            z-index: 50;  
+            outline: none;
+            margin-bottom: 10px;
+            resize: none;
+        }
+
+        ::placeholder {
+            color: #9e9e9e  ;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+
+    .more-options {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 24px;
+
+        .more-ver {
+            margin-bottom: 10px;
+        }
+    }
+}
+

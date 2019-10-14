@@ -63,6 +63,32 @@
             margin-bottom: 10px;
         }
     }
+
+    .options {
+        display: none;
+        position: absolute;
+        right: 2%;
+        list-style: none;
+        flex-direction: column;
+        // text-align: center;
+        background: white;
+        box-shadow: 0 0 1px #9e9e9e ;
+        border-radius: 10px;
+        width: 4rem;
+        margin-top: 30px;
+        margin-left: 10px;
+
+        .op-list {
+            margin: 5px 0;
+            background: white;    
+            color: #212121;       
+            font-weight: bold;
+        }
+    }
+
+    .vis {
+        display: flex;
+    }
 }
 
 //dark mode ----------------------------------------------------------------------------

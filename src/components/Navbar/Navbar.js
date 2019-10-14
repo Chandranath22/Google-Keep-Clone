@@ -34,6 +34,9 @@ import ArchiveWhite from '../../assets/img/Navbar/archive-white/1x/archive.png';
 import TrashDark from '../../assets/img/Navbar/delete-black/1x/trash.png';
 import TrashLight from '../../assets/img/Navbar/delete-white/1x/trash.png';
 
+import SignoutDark from '../../assets/img/Navbar/exit/1x/exit.png';
+import SignoutLight from '../../assets/img/Navbar/exitwhite/1x/exit.png';
+
 //Stylesheet
 import './css/Navbar.css';
 
@@ -126,8 +129,9 @@ class Navbar extends React.Component {
                                     <img onClick = {this.props.onClickClose} src={CloseLight} alt="search" className="close-nav"/>
                             }
                             <div className="nav-line"></div>
-                            <div className={!this.props.dark ? "logo-nav-black" : "logo-nav-white"}>Keep Notes</div>
-                            <li className="links-notes">Notes
+                            
+                            <div onClick={() => this.props.onLinkRouteChange('notes')} className={!this.props.dark ? "logo-nav-black" : "logo-nav-white"}>Keep Notes</div>
+                            <li onClick={() => this.props.onLinkRouteChange('notes')} className="links-notes">Notes
                                 {
                                     !this.props.dark 
                                     ?
@@ -137,7 +141,7 @@ class Navbar extends React.Component {
                                 }
                                 
                             </li>
-                            <li className="links-reminder">Reminders
+                            <li onClick={() => this.props.onLinkRouteChange('reminders')} className="links-reminder">Reminders
                                 {
                                     !this.props.dark 
                                     ?
@@ -157,7 +161,7 @@ class Navbar extends React.Component {
                                 }
                             </li>
                             <div className="hr2"></div>
-                            <li className="links-archive">Archive
+                            <li onClick={() => this.props.onLinkRouteChange('archive')} className="links-archive">Archive
                                 {
                                     !this.props.dark 
                                     ?
@@ -166,7 +170,7 @@ class Navbar extends React.Component {
                                         <img src={ArchiveWhite} alt="archive" className="archive-icon"/>
                                 }
                             </li>
-                            <li className="links-trash">Trash
+                            <li onClick={() => this.props.onLinkRouteChange('trash')} className="links-trash">Trash
                                 {
                                     !this.props.dark 
                                     ?
@@ -175,11 +179,21 @@ class Navbar extends React.Component {
                                         <img src={TrashLight} alt="trash" className="trash-icon"/>
                                 }
                             </li>
+
+                            <li onClick={() => this.props.onRouteChange('signout')} className="links-signout">Sign out
+                                {
+                                    !this.props.dark 
+                                    ?
+                                        <img src={SignoutDark} alt="signout" className="exit-icon"/>
+                                    :
+                                        <img src={SignoutLight} alt="signout" className="exit-icon"/>
+                                }
+                            </li>
                         </ul>
                     </nav>
                 </header>
             </div>
-        )
+        );
     }
 }
 

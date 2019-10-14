@@ -5,6 +5,13 @@ import './css/cards.css';
 
 class Cards extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            option: false
+        }
+    }
+
     inputValueTitle = () => {
         let len = this.props.title.length;
         if(len > 0) {
@@ -21,6 +28,10 @@ class Cards extends React.Component {
             bodyValue.push(this.props.body);
             return bodyValue[bodyValue.length-1];
         }
+    }
+
+    onClickOption = () => {
+        this.setState({option: !this.state.option});
     }
 
 
@@ -46,10 +57,14 @@ class Cards extends React.Component {
                         {
                             !this.props.dark
                             ?
-                            <img onClick = {this.props.onClickReset} src={ExpandDark} alt="expand" className="more-ver"/>
+                            <img onClick = {this.onClickOption} src={ExpandDark} alt="expand" className="more-ver"/>
                             :
-                            <img onClick = {this.props.onClickReset} src={ExpandLight} alt="expand" className="more-ver"/>
+                            <img onClick = {this.onClickOption} src={ExpandLight} alt="expand" className="more-ver"/>
                         }
+
+                        <ul className={ !this.state.option ? "options" : "options vis"}>
+                            <li onClick = {this.props.onDelete} className="op-list">Delete</li>
+                        </ul>
                     </div>
                 </div>
                 

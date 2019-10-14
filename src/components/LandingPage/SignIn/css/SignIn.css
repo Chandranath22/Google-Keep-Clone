@@ -1,0 +1,98 @@
+main .dimensions {
+  width: 80%;
+  height: auto;
+  margin: 15% auto;
+  background: white;
+  -webkit-box-shadow: 0 0 2px gray;
+          box-shadow: 0 0 2px gray;
+  border-radius: 10px;
+  text-align: center;
+}
+
+main .dimensions .signin {
+  padding-top: 10px;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  color: #212121;
+  border-bottom: 0.5px solid gray;
+}
+
+main .dimensions .email {
+  margin: 30px auto;
+}
+
+main .dimensions .email label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #212121;
+}
+
+main .dimensions .email input {
+  display: block;
+  border: none;
+  outline: none;
+  margin: 5px auto;
+  width: 80%;
+  height: 1.7rem;
+  -webkit-box-shadow: 0 0 1px gray;
+          box-shadow: 0 0 1px gray;
+  border-radius: 10px;
+  text-indent: 10px;
+}
+
+main .dimensions .password {
+  margin: 30px auto;
+}
+
+main .dimensions .password label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #212121;
+}
+
+main .dimensions .password input {
+  display: block;
+  border: none;
+  outline: none;
+  margin: 5px auto;
+  width: 80%;
+  height: 1.7rem;
+  -webkit-box-shadow: 0 0 1px gray;
+          box-shadow: 0 0 1px gray;
+  border-radius: 10px;
+  text-indent: 10px;
+}
+
+main .dimensions .submit-btn {
+  margin-bottom: 20px;
+  width: 40%;
+  height: 30px;
+  border: none;
+  outline: none;
+  background: transparent;
+  -webkit-box-shadow: 0 1px 1px gray;
+          box-shadow: 0 1px 1px gray;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #212121;
+}
+
+main .dimensions .or {
+  font-weight: bold;
+  color: #1e8ae2;
+}
+
+main .dimensions .register-btn {
+  margin-bottom: 20px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #212121;
+}
+/*# sourceMappingURL=SignIn.css.map */

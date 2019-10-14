@@ -356,9 +356,27 @@ header {
                 font-size: 1rem;
                 font-weight: bold;
                 color: #263238;
+                margin-top: 1px;
+                margin-bottom: 15px;
                 margin-left: 20%;
 
                 .trash-icon {
+                    width: 25px;
+                    position: absolute;
+                    left: 10%;
+                }
+            }
+
+            .links-signout {
+
+                padding: 20px 0 0 0;
+                font-size: 1rem;
+                font-weight: bold;
+                color: #263238;
+                margin-top: 1px;
+                margin-left: 20%;
+
+                .exit-icon {
                     width: 25px;
                     position: absolute;
                     left: 10%;
@@ -650,9 +668,26 @@ header {
                 font-weight: bold;
                 color: white;
                 margin-top: 2px;
+                margin-bottom: 15px;
                 margin-left: 20%;
 
                 .trash-icon {
+                    width: 25px;
+                    position: absolute;
+                    left: 10%;
+                }
+            }
+
+            .links-signout {
+
+                padding: 20px 0 0 0;
+                font-size: 1rem;
+                font-weight: bold;
+                color: white;
+                margin-top: 1px;
+                margin-left: 20%;
+
+                .exit-icon {
                     width: 25px;
                     position: absolute;
                     left: 10%;

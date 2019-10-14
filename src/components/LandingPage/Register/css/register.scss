@@ -1,0 +1,144 @@
+main {
+    .dimensions-reg {
+        width: 80%;
+        height: auto;
+        margin: 5% auto;
+        background: white;
+        box-shadow: 0 0 2px gray;
+        border-radius: 10px;
+        text-align: center;
+
+        .register {
+            padding-top: 10px;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            font-weight: bolder;
+            color: #212121;
+            border-bottom: 0.5px solid gray;
+        }
+
+        .firstName {
+            margin: 30px auto;
+
+            label {
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: #212121;
+            }
+
+            input {
+                display: block;
+                border: none;
+                outline: none;
+                margin: 5px auto;
+                width: 80%;
+                height: 1.7rem;
+                box-shadow: 0 0 1px gray;
+                border-radius: 10px;
+                text-indent: 10px;
+            }
+            
+        }
+
+        .lastName {
+            margin: 30px auto;
+
+            label {
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: #212121;
+            }
+
+            input {
+                display: block;
+                border: none;
+                outline: none;
+                margin: 5px auto;
+                width: 80%;
+                height: 1.7rem;
+                box-shadow: 0 0 1px gray;
+                border-radius: 10px;
+                text-indent: 10px;
+            }
+            
+        }
+
+        .email {
+            margin: 30px auto;
+
+            label {
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: #212121;
+            }
+
+            input {
+                display: block;
+                border: none;
+                outline: none;
+                margin: 5px auto;
+                width: 80%;
+                height: 1.7rem;
+                box-shadow: 0 0 1px gray;
+                border-radius: 10px;
+                text-indent: 10px;
+            }
+            
+        }
+        .password {
+            margin: 30px auto;
+
+            label {
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: #212121;
+            }
+
+            input {
+                display: block;
+                border: none;
+                outline: none;
+                margin: 5px auto;
+                width: 80%;
+                height: 1.7rem;
+                box-shadow: 0 0 1px gray;
+                border-radius: 10px;
+                text-indent: 10px;
+            }
+            
+        }
+
+        .submit-btn {
+            margin-bottom: 20px;
+            width: 40%;
+            height: 30px;
+            border: none;
+            outline: none;
+            background: transparent;
+            box-shadow: 0 1px 1px gray;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #212121;
+        }
+
+        .or {
+            font-weight: bold;
+            color: #1e8ae2;
+        }
+
+        .register-btn {
+            margin-bottom: 20px;
+            height: 30px;
+            border: none;
+            outline: none;
+            background: transparent;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #212121;
+        }
+
+
+    }
+}

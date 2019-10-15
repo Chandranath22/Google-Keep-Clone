@@ -15,17 +15,11 @@ main .dimensions-reg .register {
   font-size: 1.4rem;
   font-weight: bolder;
   color: #212121;
-  border-bottom: 0.5px solid gray;
 }
 
 main .dimensions-reg .firstName {
   margin: 30px auto;
-}
-
-main .dimensions-reg .firstName label {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #212121;
+  position: relative;
 }
 
 main .dimensions-reg .firstName input {
@@ -34,21 +28,43 @@ main .dimensions-reg .firstName input {
   outline: none;
   margin: 5px auto;
   width: 80%;
-  height: 1.7rem;
+  height: 2.7rem;
   -webkit-box-shadow: 0 0 1px gray;
           box-shadow: 0 0 1px gray;
   border-radius: 10px;
   text-indent: 10px;
+  text-indent: 35px;
+  font-size: 1rem;
+}
+
+main .dimensions-reg .firstName ::-webkit-input-placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .firstName :-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .firstName ::-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .firstName ::placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .firstName svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  margin-left: 12%;
+  opacity: 0.5;
 }
 
 main .dimensions-reg .lastName {
   margin: 30px auto;
-}
-
-main .dimensions-reg .lastName label {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #212121;
+  position: relative;
 }
 
 main .dimensions-reg .lastName input {
@@ -57,21 +73,43 @@ main .dimensions-reg .lastName input {
   outline: none;
   margin: 5px auto;
   width: 80%;
-  height: 1.7rem;
+  height: 2.7rem;
   -webkit-box-shadow: 0 0 1px gray;
           box-shadow: 0 0 1px gray;
   border-radius: 10px;
   text-indent: 10px;
+  text-indent: 35px;
+  font-size: 1rem;
+}
+
+main .dimensions-reg .lastName ::-webkit-input-placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .lastName :-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .lastName ::-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .lastName ::placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .lastName svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  margin-left: 12%;
+  opacity: 0.5;
 }
 
 main .dimensions-reg .email {
   margin: 30px auto;
-}
-
-main .dimensions-reg .email label {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #212121;
+  position: relative;
 }
 
 main .dimensions-reg .email input {
@@ -80,21 +118,42 @@ main .dimensions-reg .email input {
   outline: none;
   margin: 5px auto;
   width: 80%;
-  height: 1.7rem;
+  height: 2.7rem;
   -webkit-box-shadow: 0 0 1px gray;
           box-shadow: 0 0 1px gray;
   border-radius: 10px;
-  text-indent: 10px;
+  text-indent: 35px;
+  font-size: 1rem;
+}
+
+main .dimensions-reg .email ::-webkit-input-placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .email :-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .email ::-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .email ::placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .email svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  margin-left: 12%;
+  opacity: 0.5;
 }
 
 main .dimensions-reg .password {
   margin: 30px auto;
-}
-
-main .dimensions-reg .password label {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #212121;
+  position: relative;
 }
 
 main .dimensions-reg .password input {
@@ -103,11 +162,37 @@ main .dimensions-reg .password input {
   outline: none;
   margin: 5px auto;
   width: 80%;
-  height: 1.7rem;
+  height: 2.7rem;
   -webkit-box-shadow: 0 0 1px gray;
           box-shadow: 0 0 1px gray;
   border-radius: 10px;
-  text-indent: 10px;
+  text-indent: 35px;
+  font-size: 1rem;
+}
+
+main .dimensions-reg .password ::-webkit-input-placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .password :-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .password ::-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .password ::placeholder {
+  font-size: 1rem;
+}
+
+main .dimensions-reg .password svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  margin-left: 12%;
+  opacity: 0.5;
 }
 
 main .dimensions-reg .submit-btn {

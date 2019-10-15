@@ -14,17 +14,11 @@ main {
             font-size: 1.4rem;
             font-weight: bolder;
             color: #212121;
-            border-bottom: 0.5px solid gray;
         }
 
         .firstName {
             margin: 30px auto;
-
-            label {
-                font-size: 1.1rem;
-                font-weight: bold;
-                color: #212121;
-            }
+            position: relative;
 
             input {
                 display: block;
@@ -32,67 +26,96 @@ main {
                 outline: none;
                 margin: 5px auto;
                 width: 80%;
-                height: 1.7rem;
+                height: 2.7rem;
                 box-shadow: 0 0 1px gray;
                 border-radius: 10px;
                 text-indent: 10px;
+                text-indent: 35px;
+                font-size: 1rem;
+            }
+
+            ::placeholder {
+                font-size: 1rem;
+            }
+
+            svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: 13px;
+                margin-left: 12%;
+                opacity: 0.5;                
             }
             
         }
 
         .lastName {
             margin: 30px auto;
-
-            label {
-                font-size: 1.1rem;
-                font-weight: bold;
-                color: #212121;
-            }
-
+            position: relative;
+            
             input {
                 display: block;
                 border: none;
                 outline: none;
                 margin: 5px auto;
                 width: 80%;
-                height: 1.7rem;
+                height: 2.7rem;
                 box-shadow: 0 0 1px gray;
                 border-radius: 10px;
                 text-indent: 10px;
+                text-indent: 35px;
+                font-size: 1rem;
+            }
+
+            ::placeholder {
+                font-size: 1rem;
+            }
+
+            svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: 13px;
+                margin-left: 12%;
+                opacity: 0.5;                
             }
             
         }
 
         .email {
             margin: 30px auto;
-
-            label {
-                font-size: 1.1rem;
-                font-weight: bold;
-                color: #212121;
-            }
-
+            position: relative;
+            
             input {
                 display: block;
                 border: none;
                 outline: none;
                 margin: 5px auto;
                 width: 80%;
-                height: 1.7rem;
+                height: 2.7rem;
                 box-shadow: 0 0 1px gray;
                 border-radius: 10px;
-                text-indent: 10px;
+                text-indent: 35px;
+                font-size: 1rem;
+            }
+
+            ::placeholder {
+                font-size: 1rem;
+            }
+
+            svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: 13px;
+                margin-left: 12%;
+                opacity: 0.5;                
             }
             
         }
         .password {
             margin: 30px auto;
-
-            label {
-                font-size: 1.1rem;
-                font-weight: bold;
-                color: #212121;
-            }
+            position: relative;
 
             input {
                 display: block;
@@ -100,10 +123,24 @@ main {
                 outline: none;
                 margin: 5px auto;
                 width: 80%;
-                height: 1.7rem;
+                height: 2.7rem;
                 box-shadow: 0 0 1px gray;
                 border-radius: 10px;
-                text-indent: 10px;
+                text-indent: 35px;
+                font-size: 1rem;
+            }
+
+            ::placeholder {
+                font-size: 1rem;
+            }
+
+            svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: 13px;
+                margin-left: 12%;
+                opacity: 0.5;                
             }
             
         }

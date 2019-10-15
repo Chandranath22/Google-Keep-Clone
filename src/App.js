@@ -21,6 +21,12 @@ const initialState = {
   route: 'signin',
   isSignedIn: false,
   linkRoute: 'notes',
+  user: {
+    email: "",
+    password: "",
+    FirstName: "",
+    LastName: ""
+  },
 }
 
 class App extends React.Component {

@@ -1,12 +1,25 @@
 main .dimensions {
   width: 80%;
   height: auto;
-  margin: 15% auto;
+  margin: 15% auto 0 auto;
   background: white;
   -webkit-box-shadow: 0 0 2px gray;
           box-shadow: 0 0 2px gray;
   border-radius: 10px;
   text-align: center;
+}
+
+@media (min-width: 1024px) {
+  main .dimensions {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1500px) {
+  main .dimensions {
+    width: 40%;
+    margin-top: 5%;
+  }
 }
 
 main .dimensions .signin {
@@ -36,6 +49,12 @@ main .dimensions .email input {
   font-size: 1rem;
 }
 
+@media (min-width: 760px) {
+  main .dimensions .email input {
+    text-indent: 45px;
+  }
+}
+
 main .dimensions .email ::-webkit-input-placeholder {
   font-size: 1rem;
 }
@@ -61,6 +80,12 @@ main .dimensions .email svg {
   opacity: 0.5;
 }
 
+@media (min-width: 760px) {
+  main .dimensions .email svg {
+    margin-top: 12px;
+  }
+}
+
 main .dimensions .password {
   margin: 30px auto;
   position: relative;
@@ -78,6 +103,12 @@ main .dimensions .password input {
   border-radius: 10px;
   text-indent: 35px;
   font-size: 1rem;
+}
+
+@media (min-width: 760px) {
+  main .dimensions .password input {
+    text-indent: 45px;
+  }
 }
 
 main .dimensions .password ::-webkit-input-placeholder {
@@ -103,6 +134,12 @@ main .dimensions .password svg {
   margin-top: 13px;
   margin-left: 12%;
   opacity: 0.5;
+}
+
+@media (min-width: 760px) {
+  main .dimensions .password svg {
+    margin-top: 12px;
+  }
 }
 
 main .dimensions .error {
@@ -132,14 +169,20 @@ main .dimensions .submit-btn {
   color: #212121;
 }
 
+@media (min-width: 760px) {
+  main .dimensions .submit-btn {
+    width: 25%;
+  }
+}
+
 main .dimensions .or {
   font-weight: bold;
   color: #1e8ae2;
+  margin-bottom: 10px;
 }
 
 main .dimensions .register-btn {
   margin-bottom: 20px;
-  height: 30px;
   border: none;
   outline: none;
   background: transparent;

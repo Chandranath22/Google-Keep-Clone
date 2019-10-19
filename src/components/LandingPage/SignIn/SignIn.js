@@ -30,7 +30,6 @@ class SignIn extends React.Component {
 
     onSubmitbtn = (event) => {
         event.preventDefault();
-        // console.log(this.state);
         const data = this.state;
         const rules = {
             signInEmail: 'required|email',
@@ -45,11 +44,9 @@ class SignIn extends React.Component {
         
         validate( data, rules, messages )
         .then (() => {
-            console.log('success');
             this.props.onRouteChange('home');
         })
         .catch(errors => {
-            const formattedError = {};
             errors.forEach ( error => {
                 if(error.field === "signInEmail"){
                     this.setState(clearInvalid);
@@ -57,7 +54,7 @@ class SignIn extends React.Component {
                     this.setState({isEmail: !this.state.isEmail});
                 }else if (error.field === 'signInPassword') {
                     this.setState(clearInvalid);
-                    this.setState({invalidPassword: error.message})
+                    this.setState({invalidPassword: 'Password length should be 8 characters long'})
                     this.setState({isPassword: !this.state.isPassword});
                 }
             })

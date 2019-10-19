@@ -38,37 +38,39 @@ class Cards extends React.Component {
     render () {
         return (
             <div>
-                <div className={!this.props.dark ? "cards-light" : "cards-dark"}>
-                    <div className="card-box">
-                        <input 
-                        type="text" 
-                        className="card-title" 
-                        placeholder="Title"
-                        defaultValue = {this.inputValueTitle()}/>
-                    </div>
-                    <div className="details">
-                        <textarea 
-                        type="text" 
-                        className="card-details" 
-                        placeholder="Take a note" 
-                        defaultValue = {this.inputValueBody()} />
-                    </div>
-                    <div className="more-options">
-                        {
-                            !this.props.dark
-                            ?
-                            <img onClick = {this.onClickOption} src={ExpandDark} alt="expand" className="more-ver"/>
-                            :
-                            <img onClick = {this.onClickOption} src={ExpandLight} alt="expand" className="more-ver"/>
-                        }
+                <main>
+                    <div className={!this.props.dark ? !this.props.ham ? "cards-light" : "cards-light side" : !this.props.ham ? "cards-dark" : "cards-dark side"}>
+                        <div className="card-box">
+                            <input 
+                            type="text" 
+                            className="card-title" 
+                            placeholder="Title"
+                            defaultValue = {this.inputValueTitle()}/>
+                        </div>
+                        <div className="details">
+                            <textarea 
+                            type="text" 
+                            className="card-details" 
+                            placeholder="Take a note" 
+                            defaultValue = {this.inputValueBody()} />
+                        </div>
+                        <div className="more-options">
+                            {
+                                !this.props.dark
+                                ?
+                                <img onClick = {this.onClickOption} src={ExpandDark} alt="expand" className="more-ver"/>
+                                :
+                                <img onClick = {this.onClickOption} src={ExpandLight} alt="expand" className="more-ver"/>
+                            }
 
-                        <ul className={ !this.state.option ? "options" : "options vis"}>
-                            <li onClick = {this.props.onDelete} className="op-list">Delete</li>
-                        </ul>
+                            <ul className={ !this.state.option ? "options" : "options vis"}>
+                                <li onClick = {this.props.onDelete} className="op-list">Delete</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                
+                </main>
             </div>
+            
         )
     }
     

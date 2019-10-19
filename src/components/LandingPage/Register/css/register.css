@@ -9,6 +9,19 @@ main .dimensions-reg {
   text-align: center;
 }
 
+@media (min-width: 1024px) {
+  main .dimensions-reg {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1500px) {
+  main .dimensions-reg {
+    width: 40%;
+    margin-top: 5%;
+  }
+}
+
 main .dimensions-reg .register {
   padding-top: 10px;
   margin-bottom: 20px;
@@ -37,6 +50,12 @@ main .dimensions-reg .firstName input {
   font-size: 1rem;
 }
 
+@media (min-width: 760px) {
+  main .dimensions-reg .firstName input {
+    text-indent: 45px;
+  }
+}
+
 main .dimensions-reg .firstName ::-webkit-input-placeholder {
   font-size: 1rem;
 }
@@ -62,6 +81,12 @@ main .dimensions-reg .firstName svg {
   opacity: 0.5;
 }
 
+@media (min-width: 760px) {
+  main .dimensions-reg .firstName svg {
+    margin-top: 12px;
+  }
+}
+
 main .dimensions-reg .lastName {
   margin: 30px auto;
   position: relative;
@@ -80,6 +105,12 @@ main .dimensions-reg .lastName input {
   text-indent: 10px;
   text-indent: 35px;
   font-size: 1rem;
+}
+
+@media (min-width: 760px) {
+  main .dimensions-reg .lastName input {
+    text-indent: 45px;
+  }
 }
 
 main .dimensions-reg .lastName ::-webkit-input-placeholder {
@@ -107,6 +138,12 @@ main .dimensions-reg .lastName svg {
   opacity: 0.5;
 }
 
+@media (min-width: 760px) {
+  main .dimensions-reg .lastName svg {
+    margin-top: 12px;
+  }
+}
+
 main .dimensions-reg .email {
   margin: 30px auto;
   position: relative;
@@ -124,6 +161,12 @@ main .dimensions-reg .email input {
   border-radius: 10px;
   text-indent: 35px;
   font-size: 1rem;
+}
+
+@media (min-width: 760px) {
+  main .dimensions-reg .email input {
+    text-indent: 45px;
+  }
 }
 
 main .dimensions-reg .email ::-webkit-input-placeholder {
@@ -151,6 +194,12 @@ main .dimensions-reg .email svg {
   opacity: 0.5;
 }
 
+@media (min-width: 760px) {
+  main .dimensions-reg .email svg {
+    margin-top: 12px;
+  }
+}
+
 main .dimensions-reg .password {
   margin: 30px auto;
   position: relative;
@@ -168,6 +217,12 @@ main .dimensions-reg .password input {
   border-radius: 10px;
   text-indent: 35px;
   font-size: 1rem;
+}
+
+@media (min-width: 760px) {
+  main .dimensions-reg .password input {
+    text-indent: 45px;
+  }
 }
 
 main .dimensions-reg .password ::-webkit-input-placeholder {
@@ -195,6 +250,24 @@ main .dimensions-reg .password svg {
   opacity: 0.5;
 }
 
+@media (min-width: 760px) {
+  main .dimensions-reg .password svg {
+    margin-top: 12px;
+  }
+}
+
+main .dimensions-reg .error {
+  display: block;
+  color: red;
+  margin-top: -20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+main .dimensions-reg .hidden {
+  display: none;
+}
+
 main .dimensions-reg .submit-btn {
   margin-bottom: 20px;
   width: 40%;
@@ -210,14 +283,20 @@ main .dimensions-reg .submit-btn {
   color: #212121;
 }
 
+@media (min-width: 760px) {
+  main .dimensions-reg .submit-btn {
+    width: 25%;
+  }
+}
+
 main .dimensions-reg .or {
   font-weight: bold;
   color: #1e8ae2;
+  margin-bottom: 10px;
 }
 
 main .dimensions-reg .register-btn {
   margin-bottom: 20px;
-  height: 30px;
   border: none;
   outline: none;
   background: transparent;

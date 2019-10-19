@@ -1,3 +1,27 @@
+$Tab: 760px;
+$BigTab: 1024px;
+$Desktop: 1500px;
+
+
+@mixin Tab {
+    @media (min-width: #{$Tab}) {
+        @content;
+    }
+}
+
+@mixin  BigTab {
+    @media(min-width: #{$BigTab}) {
+        @content;
+    }    
+}
+
+@mixin Desktop {
+    @media(min-width: #{$Desktop}) {
+        @content;
+    }
+}
+
+
 main {
     .dimensions-reg {
         width: 80%;
@@ -7,6 +31,15 @@ main {
         box-shadow: 0 0 2px gray;
         border-radius: 10px;
         text-align: center;
+
+        @include BigTab {
+            width: 70%;
+        }
+
+        @include Desktop {
+            width: 40%;
+            margin-top: 5%;
+        }
 
         .register {
             padding-top: 10px;
@@ -32,6 +65,10 @@ main {
                 text-indent: 10px;
                 text-indent: 35px;
                 font-size: 1rem;
+
+                @include Tab {
+                    text-indent: 45px;
+                }
             }
 
             ::placeholder {
@@ -44,7 +81,11 @@ main {
                 left: 0;
                 margin-top: 13px;
                 margin-left: 12%;
-                opacity: 0.5;                
+                opacity: 0.5;      
+                
+                @include Tab {
+                    margin-top: 12px;
+                }
             }
             
         }
@@ -65,6 +106,10 @@ main {
                 text-indent: 10px;
                 text-indent: 35px;
                 font-size: 1rem;
+
+                @include Tab {
+                    text-indent: 45px;
+                }
             }
 
             ::placeholder {
@@ -77,7 +122,11 @@ main {
                 left: 0;
                 margin-top: 13px;
                 margin-left: 12%;
-                opacity: 0.5;                
+                opacity: 0.5;     
+                
+                @include Tab {
+                    margin-top: 12px;
+                }
             }
             
         }
@@ -97,6 +146,10 @@ main {
                 border-radius: 10px;
                 text-indent: 35px;
                 font-size: 1rem;
+
+                @include Tab {
+                    text-indent: 45px;
+                }
             }
 
             ::placeholder {
@@ -109,7 +162,11 @@ main {
                 left: 0;
                 margin-top: 13px;
                 margin-left: 12%;
-                opacity: 0.5;                
+                opacity: 0.5;   
+                
+                @include Tab {
+                    margin-top: 12px;
+                }
             }
             
         }
@@ -128,6 +185,10 @@ main {
                 border-radius: 10px;
                 text-indent: 35px;
                 font-size: 1rem;
+
+                @include Tab {
+                    text-indent: 45px;
+                }
             }
 
             ::placeholder {
@@ -140,9 +201,25 @@ main {
                 left: 0;
                 margin-top: 13px;
                 margin-left: 12%;
-                opacity: 0.5;                
+                opacity: 0.5;    
+                
+                @include Tab {
+                    margin-top: 12px;
+                }
             }
             
+        }
+
+        .error {
+            display: block;
+            color: red;
+            margin-top: -20px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
         }
 
         .submit-btn {
@@ -157,16 +234,20 @@ main {
             font-size: 1.1rem;
             font-weight: bold;
             color: #212121;
+
+            @include Tab {
+                width: 25%;
+            }
         }
 
         .or {
             font-weight: bold;
             color: #1e8ae2;
+            margin-bottom: 10px;
         }
 
         .register-btn {
             margin-bottom: 20px;
-            height: 30px;
             border: none;
             outline: none;
             background: transparent;

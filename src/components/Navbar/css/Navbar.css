@@ -43,9 +43,23 @@ header .nav-light .hamberger {
   }
 }
 
+@media (min-width: 1500px) {
+  header .nav-light .hamberger {
+    margin-left: 40px;
+    cursor: pointer;
+  }
+}
+
 header .nav-light .hamberger .menu {
   width: 30px;
   margin-left: 10px;
+}
+
+@media (min-width: 1500px) {
+  header .nav-light .hamberger .menu {
+    width: 25px;
+    opacity: 0.8;
+  }
 }
 
 header .nav-light .logo-black {
@@ -59,6 +73,13 @@ header .nav-light .logo-black {
 @media (min-width: 760px) {
   header .nav-light .logo-black {
     margin-left: 3%;
+  }
+}
+
+@media (min-width: 1500px) {
+  header .nav-light .logo-black {
+    margin-left: 6%;
+    cursor: pointer;
   }
 }
 
@@ -82,6 +103,13 @@ header .nav-light .icons {
 @media (min-width: 1024px) {
   header .nav-light .icons {
     margin-left: 12%;
+  }
+}
+
+@media (min-width: 1500px) {
+  header .nav-light .icons {
+    cursor: pointer;
+    margin-left: 5%;
   }
 }
 
@@ -167,6 +195,12 @@ header .nav-light .icons .searchbar .search-input {
   }
 }
 
+@media (min-width: 1500px) {
+  header .nav-light .icons .searchbar .search-input {
+    width: 700px;
+  }
+}
+
 @media (min-width: 760px) {
   header .nav-light .icons .searchbar .shadow-box {
     -webkit-box-shadow: 0 0 2px 2px #cfd8dc;
@@ -247,7 +281,12 @@ header .nav-light .icons .refresh {
 @media (min-width: 760px) {
   header .nav-light .icons .refresh {
     margin-left: 20px;
-    opacity: 0.9;
+  }
+}
+
+@media (min-width: 1500px) {
+  header .nav-light .icons .refresh {
+    margin-left: 150px;
   }
 }
 
@@ -262,6 +301,12 @@ header .nav-light .icons .dark {
     margin-top: 13px;
     margin-left: 40px;
     opacity: 0.9;
+  }
+}
+
+@media (min-width: 1500px) {
+  header .nav-light .icons .dark {
+    margin-left: 170px;
   }
 }
 
@@ -307,6 +352,13 @@ header .nav-light .nav-links {
     width: 30%;
     height: 90%;
     z-index: 0;
+  }
+}
+
+@media (min-width: 1500px) {
+  header .nav-light .nav-links {
+    margin-top: 0;
+    cursor: pointer;
   }
 }
 
@@ -484,9 +536,29 @@ header .nav-dark .hamberger {
   margin-top: 15px;
 }
 
+@media (min-width: 1024px) {
+  header .nav-dark .hamberger {
+    z-index: 1500;
+  }
+}
+
+@media (min-width: 1500px) {
+  header .nav-dark .hamberger {
+    margin-left: 40px;
+    cursor: pointer;
+  }
+}
+
 header .nav-dark .hamberger .menu {
   width: 30px;
   margin-left: 10px;
+}
+
+@media (min-width: 1500px) {
+  header .nav-dark .hamberger .menu {
+    width: 25px;
+    opacity: 0.8;
+  }
 }
 
 header .nav-dark .logo-white {
@@ -503,6 +575,12 @@ header .nav-dark .logo-white {
   }
 }
 
+@media (min-width: 1500px) {
+  header .nav-dark .logo-white {
+    margin-left: 6%;
+  }
+}
+
 header .nav-dark .icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -516,6 +594,19 @@ header .nav-dark .icons {
 
 @media (min-width: 760px) {
   header .nav-dark .icons {
+    margin-left: 5%;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .nav-dark .icons {
+    margin-left: 12%;
+  }
+}
+
+@media (min-width: 1500px) {
+  header .nav-dark .icons {
+    cursor: pointer;
     margin-left: 5%;
   }
 }
@@ -596,6 +687,18 @@ header .nav-dark .icons .searchbar .search-input {
   }
 }
 
+@media (min-width: 1024px) {
+  header .nav-dark .icons .searchbar .search-input {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1500px) {
+  header .nav-dark .icons .searchbar .search-input {
+    width: 700px;
+  }
+}
+
 header .nav-dark .icons .searchbar .expand-search {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -609,28 +712,28 @@ header .nav-dark .icons .searchbar .expand-search {
 }
 
 header .nav-dark .icons .searchbar ::-webkit-input-placeholder {
-  color: #263238;
+  color: #cfd8dc;
   font-weight: bold;
   font-size: 1rem;
   opacity: 0.5;
 }
 
 header .nav-dark .icons .searchbar :-ms-input-placeholder {
-  color: #263238;
+  color: #cfd8dc;
   font-weight: bold;
   font-size: 1rem;
   opacity: 0.5;
 }
 
 header .nav-dark .icons .searchbar ::-ms-input-placeholder {
-  color: #263238;
+  color: #cfd8dc;
   font-weight: bold;
   font-size: 1rem;
   opacity: 0.5;
 }
 
 header .nav-dark .icons .searchbar ::placeholder {
-  color: #263238;
+  color: #cfd8dc;
   font-weight: bold;
   font-size: 1rem;
   opacity: 0.5;
@@ -665,7 +768,12 @@ header .nav-dark .icons .refresh {
 @media (min-width: 760px) {
   header .nav-dark .icons .refresh {
     margin-left: 20px;
-    opacity: 0.9;
+  }
+}
+
+@media (min-width: 1500px) {
+  header .nav-dark .icons .refresh {
+    margin-left: 150px;
   }
 }
 
@@ -679,7 +787,12 @@ header .nav-dark .icons .dark {
   header .nav-dark .icons .dark {
     margin-top: 13px;
     margin-left: 40px;
-    opacity: 0.9;
+  }
+}
+
+@media (min-width: 1500px) {
+  header .nav-dark .icons .dark {
+    margin-left: 170px;
   }
 }
 
@@ -718,12 +831,35 @@ header .nav-dark .nav-links {
   transition: all 300ms ease-in-out;
 }
 
+@media (min-width: 1024px) {
+  header .nav-dark .nav-links {
+    background: transparent;
+    margin-top: 5%;
+    width: 30%;
+    height: 90%;
+    z-index: 0;
+  }
+}
+
+@media (min-width: 1500px) {
+  header .nav-dark .nav-links {
+    margin-top: 0;
+    cursor: pointer;
+  }
+}
+
 header .nav-dark .nav-links .close-nav {
   width: 25px;
   position: absolute;
   top: 2.3%;
   right: 5%;
   z-index: 20;
+}
+
+@media (min-width: 1024px) {
+  header .nav-dark .nav-links .close-nav {
+    display: none;
+  }
 }
 
 header .nav-dark .nav-links .nav-line {
@@ -741,6 +877,12 @@ header .nav-dark .nav-links .nav-line {
   top: 0;
 }
 
+@media (min-width: 1024px) {
+  header .nav-dark .nav-links .nav-line {
+    display: none;
+  }
+}
+
 header .nav-dark .nav-links .logo-nav-white {
   position: absolute;
   top: 0;
@@ -751,6 +893,12 @@ header .nav-dark .nav-links .logo-nav-white {
   color: white;
 }
 
+@media (min-width: 1024px) {
+  header .nav-dark .nav-links .logo-nav-white {
+    display: none;
+  }
+}
+
 header .nav-dark .nav-links .links-notes {
   font-size: 1rem;
   font-weight: bold;
@@ -758,6 +906,12 @@ header .nav-dark .nav-links .links-notes {
   margin-top: 65%;
   margin-bottom: 30px;
   margin-left: 20%;
+}
+
+@media (min-width: 1024px) {
+  header .nav-dark .nav-links .links-notes {
+    margin-top: 20%;
+  }
 }
 
 header .nav-dark .nav-links .links-notes .notes-icon {

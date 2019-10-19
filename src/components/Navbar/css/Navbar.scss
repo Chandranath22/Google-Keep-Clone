@@ -1,5 +1,6 @@
 $Tab: 760px;
 $BigTab: 1024px;
+$Desktop: 1500px;
 
 @mixin Tab {
     @media (min-width: #{$Tab}) {
@@ -11,6 +12,12 @@ $BigTab: 1024px;
     @media(min-width: #{$BigTab}) {
         @content;
     }    
+}
+
+@mixin Desktop {
+    @media(min-width: #{$Desktop}) {
+        @content;
+    }
 }
 
 
@@ -49,13 +56,24 @@ header {
         
         .hamberger {
             margin-top: 15px;
+
             @include BigTab {
                 z-index: 1500;
+            }
+
+            @include Desktop {
+                margin-left: 40px;
+                cursor: pointer;
             }
 
             .menu {
                 width: 30px;
                 margin-left: 10px;
+
+                @include Desktop {
+                    width: 25px;
+                    opacity: 0.8;
+                }
             }
         }
 
@@ -69,6 +87,13 @@ header {
             @include Tab {
                 margin-left: 3%;
             }
+
+            @include Desktop {
+                margin-left: 6%;
+                cursor: pointer;
+            }
+
+
         }
 
         .icons {
@@ -82,6 +107,11 @@ header {
 
             @include BigTab {
                 margin-left: 12%;
+            }
+
+            @include Desktop {
+                cursor: pointer;
+                margin-left: 5%;
             }
             
             .searchbar {   
@@ -151,6 +181,10 @@ header {
                     @include BigTab {
                         width: 500px;
                     }
+
+                    @include Desktop {
+                        width: 700px;
+                    }
                 }
 
                 .shadow-box {
@@ -191,7 +225,10 @@ header {
 
                 @include Tab {
                     margin-left: 20px;
-                    opacity: 0.9;
+                }
+
+                @include Desktop {
+                    margin-left: 150px;
                 }
             }
             
@@ -204,6 +241,10 @@ header {
                     margin-top: 13px;
                     margin-left: 40px;
                     opacity: 0.9;
+                }
+
+                 @include Desktop {
+                    margin-left: 170px;
                 }
             }
             
@@ -240,6 +281,11 @@ header {
                 width: 30%;
                 height: 90%;
                 z-index: 0;
+            }
+
+            @include Desktop {
+                margin-top: 0;
+                cursor: pointer;
             }
 
             .close-nav {
@@ -282,6 +328,7 @@ header {
                 @include BigTab {
                     display: none;
                 }
+                
             }
 
             .links-notes {
@@ -402,9 +449,23 @@ header {
         .hamberger {
             margin-top: 15px;
 
+            @include BigTab {
+                z-index: 1500;
+            }
+
+            @include Desktop {
+                margin-left: 40px;
+                cursor: pointer;
+            }
+
             .menu {
                 width: 30px;
                 margin-left: 10px;
+
+                @include Desktop {
+                    width: 25px;
+                    opacity: 0.8;
+                }
             }
         }
 
@@ -418,6 +479,10 @@ header {
             @include Tab {
                 margin-left: 3%;
             }
+
+            @include Desktop {
+                margin-left: 6%;
+            }
         }
 
         .icons {
@@ -426,6 +491,15 @@ header {
             margin-left: 10%;
 
             @include Tab {
+                margin-left: 5%;
+            }
+
+            @include BigTab {
+                margin-left: 12%;
+            }
+
+            @include Desktop {
+                cursor: pointer;
                 margin-left: 5%;
             }
             
@@ -492,6 +566,14 @@ header {
                         box-shadow: 0;
                         z-index: 11;
                     }
+
+                    @include BigTab {
+                        width: 500px;
+                    }
+
+                    @include Desktop {
+                        width: 700px;
+                    }
                 }
                 
                 .expand-search {
@@ -504,7 +586,7 @@ header {
                 }
                 
                 ::placeholder {
-                    color: #263238;
+                    color: #cfd8dc;
                     font-weight: bold;
                     font-size: 1rem;
                     opacity: 0.5;
@@ -525,7 +607,10 @@ header {
 
                 @include Tab {
                     margin-left: 20px;
-                    opacity: 0.9;
+                }
+
+                @include Desktop {
+                    margin-left: 150px;
                 }
             }
             
@@ -537,7 +622,10 @@ header {
                  @include Tab {
                     margin-top: 13px;
                     margin-left: 40px;
-                    opacity: 0.9;
+                }
+
+                @include Desktop {
+                    margin-left: 170px;
                 }
             }
             
@@ -568,12 +656,29 @@ header {
             z-index: 1000;
             transition: all 300ms ease-in-out;
 
+            @include BigTab {
+                background: transparent;
+                margin-top: 5%;
+                width: 30%;
+                height: 90%;
+                z-index: 0;
+            }
+
+            @include Desktop {
+                margin-top: 0;
+                cursor: pointer;
+            }
+
             .close-nav {
                 width: 25px;
                 position: absolute;
                 top: 2.3%;
                 right: 5%;
                 z-index: 20;
+
+                @include BigTab {
+                    display: none;
+                }
             }
 
             .nav-line {
@@ -586,6 +691,10 @@ header {
                 position: absolute;
                 left: 0;
                 top: 0;
+
+                @include BigTab {
+                    display: none;
+                }
             }
 
             .logo-nav-white {
@@ -596,6 +705,10 @@ header {
                 font-size: 1.4rem;
                 font-weight: bold;
                 color: white;
+
+                @include BigTab {
+                    display: none;
+                }
             }
 
             .links-notes {
@@ -605,6 +718,10 @@ header {
                 margin-top: 65%;
                 margin-bottom: 30px;
                 margin-left: 20%;
+
+                @include BigTab {
+                    margin-top: 20%;
+                }
 
                 .notes-icon {
                     width: 25px;

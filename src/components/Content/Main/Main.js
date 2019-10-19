@@ -39,7 +39,7 @@ class Main extends React.Component {
         return (
             <div>
                 <main>
-                    <div className={!this.props.dark ? "input-area-light" : "input-area-dark"}>
+                    <div className={!this.props.dark ? !this.props.ham ? "input-area-light" : "input-area-light side" : !this.props.ham ? "input-area-dark" : "input-area-dark side"}>
                         <div onClick={this.onClickTitle} className={!this.props.ham ? "invisible-box" : "invisible-box"}>
                             <input type="text" className={!this.state.title ? "box" : "box box-v"} placeholder="Take a note" />
                         </div>
@@ -75,6 +75,7 @@ class Main extends React.Component {
                     </div>
                     <CardList
                         add={this.props.add}
+                        ham = {this.props.ham}
                         dark={this.props.dark}
                         title={this.props.title}
                         body={this.props.body}

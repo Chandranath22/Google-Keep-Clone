@@ -677,6 +677,7 @@ header .nav-dark .icons .searchbar .search-input {
     display: flex;
     position: relative;
     background: #424242;
+    color: white;
     margin-top: 5px;
     width: 400px;
     height: 50px;
@@ -690,12 +691,14 @@ header .nav-dark .icons .searchbar .search-input {
 @media (min-width: 1024px) {
   header .nav-dark .icons .searchbar .search-input {
     width: 500px;
+    color: white;
   }
 }
 
 @media (min-width: 1500px) {
   header .nav-dark .icons .searchbar .search-input {
     width: 700px;
+    color: white;
   }
 }
 

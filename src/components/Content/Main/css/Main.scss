@@ -165,9 +165,35 @@ main {
                 margin: 5px 10px;
                 margin-bottom: 10px;
             }
-            
-            .more-ver {
-                margin: 4px 0;
+
+            .more {
+                
+                position: relative;
+                .more-ver {
+                    margin: 4px 0;
+                }
+
+                .resets {
+                    display: none;
+                    position: absolute;
+                    right: -6%;
+                    list-style: none;
+                    flex-direction: column;
+                    border-radius: 10px;
+                    width: 4rem;
+                    margin-top: 30px;
+                    margin-left: 10px;
+        
+                    .op-list {
+                        margin: -5px 0;
+                        color: #212121;       
+                        font-weight: bold;
+                    }
+                }
+        
+                .vis {
+                    display: flex;
+                }
             }
         }
 

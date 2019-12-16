@@ -35,6 +35,8 @@ class Main extends React.Component {
 
 
 
+
+
     render() {
         return (
             <div>
@@ -69,6 +71,9 @@ class Main extends React.Component {
                                         :
                                         <img onClick={this.props.onClickReset} src={ExpandLight} alt="expand" className="more-ver" />
                                 }
+                                <ul className={ !this.props.reset ? "resets" : "resets vis"}>
+                                    <li onClick = {this.props.onDelete} className="op-list">Reset</li>
+                                </ul>
                             </div>
 
                         </div>

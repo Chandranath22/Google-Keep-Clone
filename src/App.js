@@ -70,6 +70,7 @@ class App extends React.Component {
 
   onClickReset = () => {
     this.setState({ reset: !this.state.reset });
+    console.log(this.state.reset);
   }
 
   onRouteChange = (route) => {
@@ -119,6 +120,7 @@ class App extends React.Component {
                       linkRoute={this.linkRoute}
                       onBodyChange={this.onBodyChange}
                       onTitleChange={this.onTitleChange}
+                      onClickReset={this.onClickReset}
                     />
                     :
                     (

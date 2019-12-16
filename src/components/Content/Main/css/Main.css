@@ -217,8 +217,39 @@ main .input-area-light .btn .close {
   margin-bottom: 10px;
 }
 
-main .input-area-light .btn .more-ver {
+main .input-area-light .btn .more {
+  position: relative;
+}
+
+main .input-area-light .btn .more .more-ver {
   margin: 4px 0;
+}
+
+main .input-area-light .btn .more .resets {
+  display: none;
+  position: absolute;
+  right: -6%;
+  list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  width: 4rem;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+main .input-area-light .btn .more .resets .op-list {
+  margin: -5px 0;
+  color: #212121;
+  font-weight: bold;
+}
+
+main .input-area-light .btn .more .vis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main .input-area-light .v {

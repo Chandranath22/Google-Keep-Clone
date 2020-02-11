@@ -1,7 +1,6 @@
 import React from 'react';
 import CardList from '../../CardList/CardList';
-import ExpandDark from '../../../assets/img/Main/more_vert/1x/more_vert.png';
-import ExpandLight from '../../../assets/img/Main/more_vert-white/1x/more_vert.png';
+
 import './css/Main.css';
 
 
@@ -64,16 +63,10 @@ class Main extends React.Component {
                             </div>
 
                             <div className="more">
-                                {
-                                    !this.props.dark
-                                        ?
-                                        <img onClick={this.props.onClickReset} src={ExpandDark} alt="expand" className="more-ver" />
-                                        :
-                                        <img onClick={this.props.onClickReset} src={ExpandLight} alt="expand" className="more-ver" />
-                                }
-                                <ul className={ !this.props.reset ? "resets" : "resets vis"}>
+                                <i onClick={this.props.onClickReset} className = "material-icons ">more_vert</i>
+                                {/* <ul className={ !this.props.reset ? "resets" : "resets vis"}>
                                     <li onClick = {this.props.onDelete} className="op-list">Reset</li>
-                                </ul>
+                                </ul> */}
                             </div>
 
                         </div>

@@ -1,6 +1,5 @@
 import React from 'react';
-import ExpandDark from '../../assets/img/Main/more_vert/1x/more_vert.png';
-import ExpandLight from '../../assets/img/Main/more_vert-white/1x/more_vert.png';
+
 import './css/cards.css';
 
 class Cards extends React.Component {
@@ -55,14 +54,7 @@ class Cards extends React.Component {
                             defaultValue = {this.inputValueBody()} />
                         </div>
                         <div className="more-options">
-                            {
-                                !this.props.dark
-                                ?
-                                <img onClick = {this.onClickOption} src={ExpandDark} alt="expand" className="more-ver"/>
-                                :
-                                <img onClick = {this.onClickOption} src={ExpandLight} alt="expand" className="more-ver"/>
-                            }
-
+                            <i onClick = {this.onClickOption} className = "material-icons more-ver">more_vert</i>
                             <ul className={ !this.state.option ? "options" : "options vis"}>
                                 <li onClick = {this.props.onDelete} className="op-list">Delete</li>
                             </ul>

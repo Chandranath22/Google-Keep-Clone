@@ -1,7 +1,5 @@
 import React from 'react';
 import CardList from '../../CardList/CardList';
-import ExpandDark from '../../../assets/img/Main/more_vert/1x/more_vert.png';
-import ExpandLight from '../../../assets/img/Main/more_vert-white/1x/more_vert.png';
 import './css/Archive.css';
 
 
@@ -62,13 +60,7 @@ class Archive extends React.Component {
                             </div>
 
                             <div className="more">
-                                {
-                                    !this.props.dark
-                                        ?
-                                        <img onClick={this.props.onClickReset} src={ExpandDark} alt="expand" className="more-ver" />
-                                        :
-                                        <img onClick={this.props.onClickReset} src={ExpandLight} alt="expand" className="more-ver" />
-                                }
+                                <i onClick={this.props.onClickReset} className = "material-icons ">more_vert</i>
                             </div>
 
                         </div>

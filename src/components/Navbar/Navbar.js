@@ -25,7 +25,7 @@ class Navbar extends React.Component {
         return (
             <div>
                 <header>
-                    <nav className={!this.props.dark ? "nav-light" : "nav-dark"}>
+                    <nav className={!this.props.dark ? "nav light" : "nav dark"}>
                         <div  className="hamberger">                           
                             <i 
                                 onClick = {this.props.onClickHam} 
@@ -34,7 +34,7 @@ class Navbar extends React.Component {
                                 menu
                             </i>                            
                         </div>
-                        <div className = {!this.props.dark ? "logo-black" : "logo-white"}>Keep</div>
+                        <div className = {!this.props.dark ? "logo light" : "logo dark"}>Keep</div>
 
                         <div className="icons">
                             <div className="searchbar">                               
@@ -55,13 +55,13 @@ class Navbar extends React.Component {
                                     type="search" placeholder="Search">
                                 </input>
                             </div>
-                            <div className="refresh">                                
+                            <div className = "refresh">                                
                                 <i className = "material-icons refresh">refresh</i>                                   
-                            </div>                
-                            <div className = "dark-icon">                               
+                            </div>   
+                            <div className = {!this.props.dark ? "dark-icon links-light" : "dark-icon links-dark"}>                               
                                 <i 
                                     onClick = {this.props.onToggleTheme} 
-                                    className = "material-icons dark"
+                                    className = {!this.props.dark ? "material-icons dark-icon links-light" : "material-icons dark-icon links-dark"}
                                 >
                                     invert_colors
                                 </i>
@@ -78,26 +78,26 @@ class Navbar extends React.Component {
                             >
                                 arrow_back_ios
                             </i>
-                            <div className="nav-line"></div>                            
-                            <div onClick={() => this.props.onLinkRouteChange('notes')} className={!this.props.dark ? "logo-nav-black" : "logo-nav-white"}>Keep Notes</div>
-                            <li onClick={() => this.props.onLinkRouteChange('notes')} className="links-notes">Notes
+                            <div className={!this.props.dark ? "nav-line line-light" : " nav-line line-dark"}></div>                            
+                            <div onClick={() => this.props.onLinkRouteChange('notes')} className={!this.props.dark ? "logo-nav light-logo" : "logo-nav dark-logo"}>Keep Notes</div>
+                            <li onClick={() => this.props.onLinkRouteChange('notes')} className={!this.props.dark ? "links-notes links-light" : "links-notes links-dark"}>Notes
                                 <i className = "material-icons notes-icon">import_contacts</i>
                             </li>
-                            <li onClick={() => this.props.onLinkRouteChange('reminders')} className="links-reminder">Reminders
+                            <li onClick={() => this.props.onLinkRouteChange('reminders')} className={!this.props.dark ? "links-reminder links-light" : "links-reminder links-dark"}>Reminders
                                 <i className = "material-icons reminder-icon">notifications_none</i>
                             </li>
                             <div className="hr1"></div>
-                            <li className="links-edit">Edit labels
+                            <li className = {!this.props.dark ? "links-edit links-light" : "links-edit links-dark"}>Edit labels
                                 <i className = "material-icons edit-icon">edit</i>
                             </li>
                             <div className="hr2"></div>
-                            <li onClick={() => this.props.onLinkRouteChange('archive')} className="links-archive">Archive
+                            <li onClick={() => this.props.onLinkRouteChange('archive')} className = {!this.props.dark ? "links-archive links-light" : "links-archive links-dark"}>Archive
                                 <i className = "material-icons archive-icon">archive</i>
                             </li>
-                            <li onClick={() => this.props.onLinkRouteChange('trash')} className="links-trash">Trash
-                                <i className = "material-icons trash-icon">delete_outline</i>
+                            <li onClick={() => this.props.onLinkRouteChange('trash')} className = {!this.props.dark ? "links-trash links-light" : "links-trash links-dark"}>Trash
+                                <i className = "material-icons trash-icon">delete</i>
                             </li>
-                            <li onClick={() => this.props.onRouteChange('signout')} className="links-signout">Sign out
+                            <li onClick={() => this.props.onRouteChange('signout')} className = {!this.props.dark ? "links-signout links-light" : "links-signout links-dark"}>Sign out
                                 <i className = "material-icons exit-icon">logout_outline</i>
                             </li>
                         </ul>

@@ -2,6 +2,11 @@ $Tab: 760px;
 $BigTab: 1024px;
 $Desktop: 1500px;
 
+@font-face {
+    font-family: "Google-Medium";
+    src: url('../../../assets/fonts/GoogleSans-Medium.ttf');
+}
+
 @mixin Tab {
     @media (min-width: #{$Tab}) {
         @content;
@@ -67,8 +72,9 @@ header {
             }
 
             .menu {
-                margin-left: 10px;
+                margin-left: 10%;
                 font-size: 1.5rem;
+                font-weight: 400;
 
                 @include Desktop {
                     opacity: 0.8;
@@ -76,27 +82,47 @@ header {
             }
         }
 
+        .logoImg {
+            display: none;
+            width: 35px;
+            height: 35px;
+            margin-top: 10px;
+
+            @include Desktop{
+                display: flex;
+                width: 40px;
+                height: 40px;
+                margin-top: 8px;
+            }
+        }
+
+        .imgHide {
+            display: none;
+        }
+
         .logo {
-            padding: 14px 0;
-            font-size: 1.2rem;
-            font-weight: 700;
+            width: 50px;
+            margin-left: 4%;
+            padding: 13px 0;
+            font-size: 1.3rem;
+            color: #424242;
 
             @include Tab {
-                margin-left: 3%;
+                margin-left: 1%;
             }
 
             @include Desktop {
-                margin-left: 2%;
+                margin-left: 5px;
                 cursor: pointer;
             }
 
 
         }
 
-        .icons {
+        .icon-search {
             display: flex;
             flex-direction: row;
-            margin-left: 25%;
+            margin-left: 25px;
 
             @include Tab {
                 margin-left: 5%;
@@ -191,7 +217,7 @@ header {
                 .expand-search {
                     display: flex;
                     left: 1%;
-                    width: 55%;
+                    width: 60%;
                     border-radius: 10px;
                     box-shadow: 0 0 2px 2px #cfd8dc ;
                     z-index: 11;
@@ -210,49 +236,60 @@ header {
                     }
                 }
                 
-            }    
-            
-            .refresh {
-                margin: auto 0 auto 3px;
-
-                @include Tab {
-                    margin-left: 20px;
-                }
-
-                @include Desktop {
-                    margin-left: 40%;
-                }
-            }
-            
-            .dark-icon {
-                margin: auto 0 auto 7px;
-
-                @include Tab {
-                    margin-left: 10px;
-                    opacity: 0.9;
-                }
-
-                 @include Desktop {
-                    // margin-left: 170px;
-                    margin-left: 20px;
-                }
             }
 
-            .account-icon {
-                margin: auto 0;
-            
-                @include Desktop {
-                    margin-left: 8%;
+            .icons {
+                position: absolute;
+                display: flex;
+                flex-direction: row;
+                right: 5%;
+                margin-top: 10px;
+
+                @include Tab {
+                    right: 10%;
                 }
-                .account {
-                    width: 35px;
-                    height: 35px;
-                    background: #004d40;
-                    border-radius: 50%;
-                    margin-left: 20px;
+            
+                .refresh {
+                    margin: auto 10px;
 
                     @include Tab {
-                        margin-left: 100%;
+                        margin-left: 20px;
+                    }
+
+                    @include Desktop {
+                        margin-left: 40%;
+                    }
+                }
+                
+                .dark-icon {
+                    margin: auto 0 auto 10px;
+
+                    @include Tab {
+                        margin-left: 10px;
+                        opacity: 0.9;
+                    }
+
+                    @include Desktop {
+                        margin-left: 20px;
+                    }
+                }
+
+                .account-icon {
+                    margin: auto 0;
+                
+                    @include Desktop {
+                        margin-left: 8%;
+                    }
+                    .account {
+                        width: 35px;
+                        height: 35px;
+                        background: #004d40;
+                        border-radius: 50%;
+                        margin-left: 15px;
+
+                        @include Tab {
+                            margin-left: 100%;
+                        }
                     }
                 }
             }
@@ -327,7 +364,7 @@ header {
                 margin-top: 30%;
                 left: 10%;
                 font-size: 1.4rem;
-                font-weight: bold;
+                // font-weight: bold;
 
                 @include BigTab {
                     display: none;
@@ -344,8 +381,10 @@ header {
             }
 
             .links-notes {
-                font-size: 1rem;
-                font-weight: bold;
+                font-size: 0.9rem;
+                // color: black;
+                // font-weight: bold;
+                font-family: Google-Medium;
                 margin-top: 65%;
                 margin-bottom: 30px;
                 margin-left: 20%;
@@ -355,6 +394,7 @@ header {
                 }
 
                 .notes-icon {
+                    // color: black;
                     width: 25px;
                     position: absolute;
                     left: 10%;
@@ -364,13 +404,15 @@ header {
 
             .links-reminder {
                 padding: 10px 0;
-                font-size: 1rem;
-                font-weight: bold;
+                font-size: 0.9rem;
+                font-family: Google-Medium;
+                // color: black;
                 margin-top: 1%;
                 margin-bottom: 20px;
                 margin-left: 20%;
 
                 .reminder-icon {
+                    // color: black;
                     width: 25px;
                     position: absolute;
                     left: 10%;
@@ -379,13 +421,16 @@ header {
 
             .links-edit {
                 padding: 40px 0 20px 0;
-                font-size: 1rem;
-                font-weight: bold;
+                font-size: 0.9rem;
+                font-family: Google-Medium;
+                // color: black;
+                // font-weight: bold;
                 margin-top: 1px;
                 margin-left: 20%;
                 margin-bottom: 1px;
 
                 .edit-icon {
+                    // color: black;
                     width: 25px;
                     position: absolute;
                     left: 10%;
@@ -394,13 +439,16 @@ header {
 
             .links-archive {
                 padding: 20px 0 0 0;
-                font-size: 1rem;
-                font-weight: bold;
+                font-size: 0.9rem;
+                font-family: Google-Medium;
+                // font-weight: bold;
+                // color: black;
                 margin-top: 1px;
                 margin-bottom: 30px;
                 margin-left: 20%;
 
                 .archive-icon {
+                    // color: black;
                     width: 25px;
                     position: absolute;
                     left: 10%;
@@ -408,13 +456,16 @@ header {
             }
 
             .links-trash {
-                font-size: 1rem;
-                font-weight: bold;
+                font-size: 0.9rem;
+                font-family: Google-Medium;
+                // color: black;
+                // font-weight: bold;
                 margin-top: 1px;
                 margin-bottom: 15px;
                 margin-left: 20%;
 
                 .trash-icon {
+                    // color: black;
                     width: 25px;
                     position: absolute;
                     left: 10%;
@@ -422,14 +473,16 @@ header {
             }
 
             .links-signout {
-
+                // color: black;
                 padding: 20px 0 0 0;
-                font-size: 1rem;
-                font-weight: bold;
+                font-size: 0.9rem;
+                font-family: Google-Medium;
+                // font-weight: bold;
                 margin-top: 1px;
                 margin-left: 20%;
 
                 .exit-icon {
+                    // color: black;
                     width: 25px;
                     position: absolute;
                     left: 10%;
@@ -446,7 +499,7 @@ header {
         }
         
         .open {
-            left: 0;
+            left: -8px;
         }
     }   
 
@@ -458,6 +511,10 @@ header {
     .dark {
         background: #212121;
         box-shadow: 0 1px #424242;
+
+        .logo {
+            color: #eeeeee;
+        }
 
         .icons {
             .searchbar {

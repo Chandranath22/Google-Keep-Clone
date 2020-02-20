@@ -31,6 +31,7 @@ class Cards extends React.Component {
 
     onClickOption = () => {
         this.setState({option: !this.state.option});
+        console.log(this.props.key);
     }
 
 
@@ -38,7 +39,13 @@ class Cards extends React.Component {
         return (
             <div>
                 <main>
-                    <div className={!this.props.dark ? !this.props.ham ? "cards-light" : "cards-light side" : !this.props.ham ? "cards-dark" : "cards-dark side"}>
+                    <div 
+                        className={
+                            !this.props.dark 
+                                ? !this.props.ham ? "cards light" : "cards light side" 
+                                : !this.props.ham ? "cards dark" : "cards dark side"
+                            }
+                    >
                         <div className="card-box">
                             <input 
                             type="text" 
@@ -56,7 +63,7 @@ class Cards extends React.Component {
                         <div className="more-options">
                             <i onClick = {this.onClickOption} className = "material-icons more-ver">more_vert</i>
                             <ul className={ !this.state.option ? "options" : "options vis"}>
-                                <li onClick = {this.props.onDelete} className="op-list">Delete</li>
+                                <li onClick = {this.props.onDelete} className="op-list">Delete note</li>
                             </ul>
                         </div>
                     </div>

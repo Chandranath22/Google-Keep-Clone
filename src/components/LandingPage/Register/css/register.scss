@@ -2,6 +2,16 @@ $Tab: 760px;
 $BigTab: 1024px;
 $Desktop: 1500px;
 
+@font-face {
+    font-family: "Google-Regular";
+    src: url('../../../../assets/fonts/GoogleSans-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Google-Regular";
+    src: url('../../../../assets/fonts/GoogleSans-Regular.ttf');
+}
+
 
 @mixin Tab {
     @media (min-width: #{$Tab}) {
@@ -28,8 +38,8 @@ main {
         height: auto;
         margin: 5% auto;
         background: white;
-        box-shadow: 0 0 2px gray;
-        border-radius: 10px;
+        box-shadow: 0 0 1px gray;
+        border-radius: 5px;
         text-align: center;
 
         @include BigTab {
@@ -44,9 +54,9 @@ main {
         .register {
             padding-top: 10px;
             margin-bottom: 20px;
+            font-family: Google-Regular;
             font-size: 1.4rem;
-            font-weight: bolder;
-            color: #212121;
+            color: #424242;
         }
 
         .firstName {
@@ -61,10 +71,11 @@ main {
                 width: 80%;
                 height: 2.7rem;
                 box-shadow: 0 0 1px gray;
-                border-radius: 10px;
+                border-radius: 5px;
                 text-indent: 10px;
                 text-indent: 35px;
                 font-size: 1rem;
+                font-family: Google-Regular;
 
                 @include Tab {
                     text-indent: 45px;
@@ -73,6 +84,7 @@ main {
 
             ::placeholder {
                 font-size: 1rem;
+                font-family: Google-Regular;
             }
 
             svg {
@@ -102,10 +114,11 @@ main {
                 width: 80%;
                 height: 2.7rem;
                 box-shadow: 0 0 1px gray;
-                border-radius: 10px;
+                border-radius: 5px;
                 text-indent: 10px;
                 text-indent: 35px;
                 font-size: 1rem;
+                font-family: Google-Regular;
 
                 @include Tab {
                     text-indent: 45px;
@@ -114,6 +127,7 @@ main {
 
             ::placeholder {
                 font-size: 1rem;
+                font-family: Google-Regular;
             }
 
             svg {
@@ -143,9 +157,10 @@ main {
                 width: 80%;
                 height: 2.7rem;
                 box-shadow: 0 0 1px gray;
-                border-radius: 10px;
+                border-radius: 5px;
                 text-indent: 35px;
                 font-size: 1rem;
+                font-family: Google-Regular;
 
                 @include Tab {
                     text-indent: 45px;
@@ -154,6 +169,7 @@ main {
 
             ::placeholder {
                 font-size: 1rem;
+                font-family: Google-Regular;
             }
 
             svg {
@@ -182,9 +198,10 @@ main {
                 width: 80%;
                 height: 2.7rem;
                 box-shadow: 0 0 1px gray;
-                border-radius: 10px;
+                border-radius: 5px;
                 text-indent: 35px;
                 font-size: 1rem;
+                font-family: Google-Regular;
 
                 @include Tab {
                     text-indent: 45px;
@@ -193,6 +210,7 @@ main {
 
             ::placeholder {
                 font-size: 1rem;
+                font-family: Google-Regular;
             }
 
             svg {
@@ -212,9 +230,9 @@ main {
 
         .error {
             display: block;
-            color: red;
+            color: #b71c1c;
             margin-top: -20px;
-            font-weight: 700;
+            font-family: Google-Regular;
             text-align: center;
         }
 
@@ -229,10 +247,10 @@ main {
             border: none;
             outline: none;
             background: transparent;
-            box-shadow: 0 1px 1px gray;
-            border-radius: 10px;
+            box-shadow: 0 0 1px gray;
+            border-radius: 5px;
             font-size: 1.1rem;
-            font-weight: bold;
+            font-family: Google-Regular;
             color: #212121;
 
             @include Tab {
@@ -241,7 +259,7 @@ main {
         }
 
         .or {
-            font-weight: bold;
+            font-family: Google-Regular;
             color: #1e8ae2;
             margin-bottom: 10px;
         }
@@ -253,7 +271,7 @@ main {
             background: transparent;
             border-radius: 10px;
             font-size: 1rem;
-            font-weight: bold;
+            font-family: Google-Regular;
             color: #212121;
         }
 

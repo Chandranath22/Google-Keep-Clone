@@ -1,7 +1,13 @@
+@font-face {
+  font-family: "Myfonts";
+  src: url('./assets/fonts//GoogleSans-Regular.ttf')
+}
+
 body {
   margin: 0;
-  font-family: 'Montserrat';
+  /* font-family: 'Montserrat'; */
   /* font-family: 'Roboto'; */
+  font-family: Myfonts;
   background: #212121;
   overflow: auto;
 }

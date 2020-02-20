@@ -11,16 +11,17 @@ import './App.css';
 
 
 const initialState = {
+  logo: "Keep",
   dark: false,
   add: 0,
   close: false,
   ham: false,
-  reset: false,
+  more: false,
   title: '',
   body: '',
   route: 'signin',
   isSignedIn: false,
-  linkRoute: 'notes',
+  linkRoute: 'Notes',
   user: {
     email: "",
     password: "",
@@ -68,9 +69,9 @@ class App extends React.Component {
     this.setState({ ham: false });
   }
 
-  onClickReset = () => {
-    this.setState({ reset: !this.state.reset });
-    console.log(this.state.reset);
+  onClickMore = () => {
+    this.setState({ more: !this.state.more });
+    console.log(this.state.more);
   }
 
   onRouteChange = (route) => {
@@ -84,6 +85,11 @@ class App extends React.Component {
 
   onLinkRouteChange = (route) => {
     this.setState({ linkRoute: route });
+    if(route !== "Notes"){
+      this.setState({logo: route});
+    } else {
+      this.setState({logo: "Keep"})
+    }
   }
 
   render() {
@@ -95,6 +101,7 @@ class App extends React.Component {
             <div>
               <header>
                 <Navbar
+                  logo={this.state.logo}
                   dark={this.state.dark}
                   ham={this.state.ham}
                   onToggleTheme={this.onToggleTheme}
@@ -106,7 +113,7 @@ class App extends React.Component {
               </header>
               <main>
                 {
-                  this.state.linkRoute === "notes"
+                  this.state.linkRoute === "Notes"
                     ?
                     <Main
                       dark={this.state.dark}
@@ -116,24 +123,37 @@ class App extends React.Component {
                       ham={this.state.ham}
                       title={this.state.title}
                       body={this.state.body}
-                      reset={this.state.reset}
+                      reset={this.state.more}
                       linkRoute={this.linkRoute}
                       onBodyChange={this.onBodyChange}
                       onTitleChange={this.onTitleChange}
-                      onClickReset={this.onClickReset}
+                      onClickMore={this.onClickMore}
                     />
                     :
                     (
-                      this.state.linkRoute === "reminders"
+                      this.state.linkRoute === "Reminders"
                         ?
-                        <Reminder/>
+                        <Reminder
+                          dark={this.state.dark}
+                          add={this.state.add}
+                          onAdd={this.onAdd}
+                          onDelete={this.onDelete}
+                          ham={this.state.ham}
+                          title={this.state.title}
+                          body={this.state.body}
+                          reset={this.state.more}
+                          linkRoute={this.linkRoute}
+                          onBodyChange={this.onBodyChange}
+                          onTitleChange={this.onTitleChange}
+                          onClickReset={this.onClickMore}
+                        />
                         :
                         (
-                          this.state.linkRoute === "archive"
+                          this.state.linkRoute === "Archive"
                             ?
-                            <Archive/>
+                            <Archive />
                             :
-                            <Trash/>
+                            <Trash />
                         )
                     )
 

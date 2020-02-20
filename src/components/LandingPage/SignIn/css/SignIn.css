@@ -1,11 +1,21 @@
+@font-face {
+  font-family: "Google-Regular";
+  src: url("../../../../assets/fonts/GoogleSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Google-Regular";
+  src: url("../../../../assets/fonts/GoogleSans-Regular.ttf");
+}
+
 main .dimensions {
   width: 80%;
   height: auto;
   margin: 15% auto 0 auto;
   background: white;
-  -webkit-box-shadow: 0 0 2px gray;
-          box-shadow: 0 0 2px gray;
-  border-radius: 10px;
+  -webkit-box-shadow: 0 0 1px gray;
+          box-shadow: 0 0 1px gray;
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -25,9 +35,9 @@ main .dimensions {
 main .dimensions .signin {
   padding-top: 10px;
   margin-bottom: 20px;
+  font-family: Google-Regular;
   font-size: 1.4rem;
-  font-weight: bolder;
-  color: #212121;
+  color: #424242;
 }
 
 main .dimensions .email {
@@ -44,9 +54,10 @@ main .dimensions .email input {
   height: 2.7rem;
   -webkit-box-shadow: 0 0 1px gray;
           box-shadow: 0 0 1px gray;
-  border-radius: 10px;
+  border-radius: 5px;
   text-indent: 35px;
   font-size: 1rem;
+  font-family: Google-Regular;
 }
 
 @media (min-width: 760px) {
@@ -57,18 +68,22 @@ main .dimensions .email input {
 
 main .dimensions .email ::-webkit-input-placeholder {
   font-size: 1rem;
+  font-family: Google-Regular;
 }
 
 main .dimensions .email :-ms-input-placeholder {
   font-size: 1rem;
+  font-family: Google-Regular;
 }
 
 main .dimensions .email ::-ms-input-placeholder {
   font-size: 1rem;
+  font-family: Google-Regular;
 }
 
 main .dimensions .email ::placeholder {
   font-size: 1rem;
+  font-family: Google-Regular;
 }
 
 main .dimensions .email svg {
@@ -100,9 +115,10 @@ main .dimensions .password input {
   height: 2.7rem;
   -webkit-box-shadow: 0 0 1px gray;
           box-shadow: 0 0 1px gray;
-  border-radius: 10px;
+  border-radius: 5px;
   text-indent: 35px;
   font-size: 1rem;
+  font-family: Google-Regular;
 }
 
 @media (min-width: 760px) {
@@ -113,18 +129,22 @@ main .dimensions .password input {
 
 main .dimensions .password ::-webkit-input-placeholder {
   font-size: 1rem;
+  font-family: Google-Regular;
 }
 
 main .dimensions .password :-ms-input-placeholder {
   font-size: 1rem;
+  font-family: Google-Regular;
 }
 
 main .dimensions .password ::-ms-input-placeholder {
   font-size: 1rem;
+  font-family: Google-Regular;
 }
 
 main .dimensions .password ::placeholder {
   font-size: 1rem;
+  font-family: Google-Regular;
 }
 
 main .dimensions .password svg {
@@ -144,9 +164,9 @@ main .dimensions .password svg {
 
 main .dimensions .error {
   display: block;
-  color: red;
+  color: #b71c1c;
   margin-top: -20px;
-  font-weight: 700;
+  font-family: Google-Regular;
   text-align: center;
 }
 
@@ -161,11 +181,11 @@ main .dimensions .submit-btn {
   border: none;
   outline: none;
   background: transparent;
-  -webkit-box-shadow: 0 1px 1px gray;
-          box-shadow: 0 1px 1px gray;
-  border-radius: 10px;
+  -webkit-box-shadow: 0  0  1px gray;
+          box-shadow: 0  0  1px gray;
+  border-radius: 5px;
+  font-family: Google-Regular;
   font-size: 1.1rem;
-  font-weight: bold;
   color: #212121;
 }
 
@@ -176,7 +196,7 @@ main .dimensions .submit-btn {
 }
 
 main .dimensions .or {
-  font-weight: bold;
+  font-family: Google-Regular;
   color: #1e8ae2;
   margin-bottom: 10px;
 }
@@ -186,9 +206,8 @@ main .dimensions .register-btn {
   border: none;
   outline: none;
   background: transparent;
-  border-radius: 10px;
+  font-family: Google-Regular;
   font-size: 1rem;
-  font-weight: bold;
   color: #212121;
 }
 /*# sourceMappingURL=SignIn.css.map */

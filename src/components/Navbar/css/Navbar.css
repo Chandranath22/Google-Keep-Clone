@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Google-Medium";
+  src: url("../../../assets/fonts/GoogleSans-Medium.ttf");
+}
+
 header .hr1 {
   margin: 0;
   margin-left: -39px;
@@ -54,8 +59,9 @@ header .nav .hamberger {
 }
 
 header .nav .hamberger .menu {
-  margin-left: 10px;
+  margin-left: 10%;
   font-size: 1.5rem;
+  font-weight: 400;
 }
 
 @media (min-width: 1500px) {
@@ -64,26 +70,50 @@ header .nav .hamberger .menu {
   }
 }
 
+header .nav .logoImg {
+  display: none;
+  width: 35px;
+  height: 35px;
+  margin-top: 10px;
+}
+
+@media (min-width: 1500px) {
+  header .nav .logoImg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+  }
+}
+
+header .nav .imgHide {
+  display: none;
+}
+
 header .nav .logo {
-  padding: 14px 0;
-  font-size: 1.2rem;
-  font-weight: 700;
+  width: 50px;
+  margin-left: 4%;
+  padding: 13px 0;
+  font-size: 1.3rem;
+  color: #424242;
 }
 
 @media (min-width: 760px) {
   header .nav .logo {
-    margin-left: 3%;
+    margin-left: 1%;
   }
 }
 
 @media (min-width: 1500px) {
   header .nav .logo {
-    margin-left: 2%;
+    margin-left: 5px;
     cursor: pointer;
   }
 }
 
-header .nav .icons {
+header .nav .icon-search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,29 +121,29 @@ header .nav .icons {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-left: 25%;
+  margin-left: 25px;
 }
 
 @media (min-width: 760px) {
-  header .nav .icons {
+  header .nav .icon-search {
     margin-left: 5%;
   }
 }
 
 @media (min-width: 1024px) {
-  header .nav .icons {
+  header .nav .icon-search {
     margin-left: 12%;
   }
 }
 
 @media (min-width: 1500px) {
-  header .nav .icons {
+  header .nav .icon-search {
     cursor: pointer;
     margin-left: 5%;
   }
 }
 
-header .nav .icons .searchbar .back {
+header .nav .icon-search .searchbar .back {
   display: none;
   position: absolute;
   top: 1.2%;
@@ -124,40 +154,40 @@ header .nav .icons .searchbar .back {
   color: #616161;
 }
 
-header .nav .icons .searchbar .back-v {
+header .nav .icon-search .searchbar .back-v {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media (min-width: 760px) {
-  header .nav .icons .searchbar .back-v {
+  header .nav .icon-search .searchbar .back-v {
     display: none;
   }
 }
 
-header .nav .icons .searchbar .search {
+header .nav .icon-search .searchbar .search {
   margin-top: 15px;
   z-index: 10;
 }
 
 @media (min-width: 760px) {
-  header .nav .icons .searchbar .search {
+  header .nav .icon-search .searchbar .search {
     display: none;
   }
 }
 
-header .nav .icons .searchbar .hide {
+header .nav .icon-search .searchbar .hide {
   visibility: hidden;
 }
 
 @media (min-width: 760px) {
-  header .nav .icons .searchbar .hide {
+  header .nav .icon-search .searchbar .hide {
     display: none;
   }
 }
 
-header .nav .icons .searchbar .search-input {
+header .nav .icon-search .searchbar .search-input {
   top: 0.3%;
   display: none;
   position: absolute;
@@ -171,7 +201,7 @@ header .nav .icons .searchbar .search-input {
 }
 
 @media (min-width: 760px) {
-  header .nav .icons .searchbar .search-input {
+  header .nav .icon-search .searchbar .search-input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -188,58 +218,58 @@ header .nav .icons .searchbar .search-input {
 }
 
 @media (min-width: 1024px) {
-  header .nav .icons .searchbar .search-input {
+  header .nav .icon-search .searchbar .search-input {
     width: 500px;
   }
 }
 
 @media (min-width: 1500px) {
-  header .nav .icons .searchbar .search-input {
+  header .nav .icon-search .searchbar .search-input {
     width: 700px;
   }
 }
 
 @media (min-width: 760px) {
-  header .nav .icons .searchbar .shadow-box {
+  header .nav .icon-search .searchbar .shadow-box {
     -webkit-box-shadow: 0 0 2px 2px #cfd8dc;
             box-shadow: 0 0 2px 2px #cfd8dc;
   }
 }
 
-header .nav .icons .searchbar .expand-search {
+header .nav .icon-search .searchbar .expand-search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   left: 1%;
-  width: 55%;
+  width: 60%;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 2px 2px #cfd8dc;
           box-shadow: 0 0 2px 2px #cfd8dc;
   z-index: 11;
 }
 
-header .nav .icons .searchbar ::-webkit-input-placeholder {
+header .nav .icon-search .searchbar ::-webkit-input-placeholder {
   color: #616161;
   font-weight: 500;
   font-size: 1rem;
   opacity: 0.7;
 }
 
-header .nav .icons .searchbar :-ms-input-placeholder {
+header .nav .icon-search .searchbar :-ms-input-placeholder {
   color: #616161;
   font-weight: 500;
   font-size: 1rem;
   opacity: 0.7;
 }
 
-header .nav .icons .searchbar ::-ms-input-placeholder {
+header .nav .icon-search .searchbar ::-ms-input-placeholder {
   color: #616161;
   font-weight: 500;
   font-size: 1rem;
   opacity: 0.7;
 }
 
-header .nav .icons .searchbar ::placeholder {
+header .nav .icon-search .searchbar ::placeholder {
   color: #616161;
   font-weight: 500;
   font-size: 1rem;
@@ -247,81 +277,100 @@ header .nav .icons .searchbar ::placeholder {
 }
 
 @media (min-width: 760px) {
-  header .nav .icons .searchbar ::-webkit-input-placeholder {
+  header .nav .icon-search .searchbar ::-webkit-input-placeholder {
     color: #757575;
     opacity: 1;
     font-weight: bold;
   }
-  header .nav .icons .searchbar :-ms-input-placeholder {
+  header .nav .icon-search .searchbar :-ms-input-placeholder {
     color: #757575;
     opacity: 1;
     font-weight: bold;
   }
-  header .nav .icons .searchbar ::-ms-input-placeholder {
+  header .nav .icon-search .searchbar ::-ms-input-placeholder {
     color: #757575;
     opacity: 1;
     font-weight: bold;
   }
-  header .nav .icons .searchbar ::placeholder {
+  header .nav .icon-search .searchbar ::placeholder {
     color: #757575;
     opacity: 1;
     font-weight: bold;
   }
 }
 
-header .nav .icons .refresh {
-  margin: auto 0 auto 3px;
+header .nav .icon-search .icons {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  right: 5%;
+  margin-top: 10px;
 }
 
 @media (min-width: 760px) {
-  header .nav .icons .refresh {
+  header .nav .icon-search .icons {
+    right: 10%;
+  }
+}
+
+header .nav .icon-search .icons .refresh {
+  margin: auto 10px;
+}
+
+@media (min-width: 760px) {
+  header .nav .icon-search .icons .refresh {
     margin-left: 20px;
   }
 }
 
 @media (min-width: 1500px) {
-  header .nav .icons .refresh {
+  header .nav .icon-search .icons .refresh {
     margin-left: 40%;
   }
 }
 
-header .nav .icons .dark-icon {
-  margin: auto 0 auto 7px;
+header .nav .icon-search .icons .dark-icon {
+  margin: auto 0 auto 10px;
 }
 
 @media (min-width: 760px) {
-  header .nav .icons .dark-icon {
+  header .nav .icon-search .icons .dark-icon {
     margin-left: 10px;
     opacity: 0.9;
   }
 }
 
 @media (min-width: 1500px) {
-  header .nav .icons .dark-icon {
+  header .nav .icon-search .icons .dark-icon {
     margin-left: 20px;
   }
 }
 
-header .nav .icons .account-icon {
+header .nav .icon-search .icons .account-icon {
   margin: auto 0;
 }
 
 @media (min-width: 1500px) {
-  header .nav .icons .account-icon {
+  header .nav .icon-search .icons .account-icon {
     margin-left: 8%;
   }
 }
 
-header .nav .icons .account-icon .account {
+header .nav .icon-search .icons .account-icon .account {
   width: 35px;
   height: 35px;
   background: #004d40;
   border-radius: 50%;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 @media (min-width: 760px) {
-  header .nav .icons .account-icon .account {
+  header .nav .icon-search .icons .account-icon .account {
     margin-left: 100%;
   }
 }
@@ -414,7 +463,6 @@ header .nav .nav-links .logo-nav {
   margin-top: 30%;
   left: 10%;
   font-size: 1.4rem;
-  font-weight: bold;
 }
 
 @media (min-width: 1024px) {
@@ -432,8 +480,8 @@ header .nav .nav-links .dark-logo {
 }
 
 header .nav .nav-links .links-notes {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.9rem;
+  font-family: Google-Medium;
   margin-top: 65%;
   margin-bottom: 30px;
   margin-left: 20%;
@@ -454,8 +502,8 @@ header .nav .nav-links .links-notes .notes-icon {
 
 header .nav .nav-links .links-reminder {
   padding: 10px 0;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.9rem;
+  font-family: Google-Medium;
   margin-top: 1%;
   margin-bottom: 20px;
   margin-left: 20%;
@@ -469,8 +517,8 @@ header .nav .nav-links .links-reminder .reminder-icon {
 
 header .nav .nav-links .links-edit {
   padding: 40px 0 20px 0;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.9rem;
+  font-family: Google-Medium;
   margin-top: 1px;
   margin-left: 20%;
   margin-bottom: 1px;
@@ -484,8 +532,8 @@ header .nav .nav-links .links-edit .edit-icon {
 
 header .nav .nav-links .links-archive {
   padding: 20px 0 0 0;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.9rem;
+  font-family: Google-Medium;
   margin-top: 1px;
   margin-bottom: 30px;
   margin-left: 20%;
@@ -498,8 +546,8 @@ header .nav .nav-links .links-archive .archive-icon {
 }
 
 header .nav .nav-links .links-trash {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.9rem;
+  font-family: Google-Medium;
   margin-top: 1px;
   margin-bottom: 15px;
   margin-left: 20%;
@@ -513,8 +561,8 @@ header .nav .nav-links .links-trash .trash-icon {
 
 header .nav .nav-links .links-signout {
   padding: 20px 0 0 0;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.9rem;
+  font-family: Google-Medium;
   margin-top: 1px;
   margin-left: 20%;
 }
@@ -534,7 +582,7 @@ header .nav .links-dark {
 }
 
 header .nav .open {
-  left: 0;
+  left: -8px;
 }
 
 header .light {
@@ -547,6 +595,10 @@ header .dark {
   background: #212121;
   -webkit-box-shadow: 0 1px #424242;
           box-shadow: 0 1px #424242;
+}
+
+header .dark .logo {
+  color: #eeeeee;
 }
 
 @media (min-width: 760px) {

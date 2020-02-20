@@ -1,0 +1,368 @@
+$Tab: 760px;
+$BigTab: 1024px;
+$Desktop: 1500px;
+
+@font-face {
+    font-family: "Google-Medium";
+    src: url('../../../../assets/fonts/GoogleSans-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Google-Regular";
+    src: url('../../../../assets/fonts/GoogleSans-Regular.ttf');
+}
+
+@mixin Tab {
+    @media (min-width: #{$Tab}) {
+        @content;
+    }
+}
+
+@mixin  BigTab {
+    @media(min-width: #{$BigTab}) {
+        @content;
+    }    
+}
+
+@mixin Desktop {
+    @media(min-width: #{$Desktop}) {
+        @content;
+    }
+}
+
+
+main {
+
+    margin: 20px 0;
+
+    .input-area {
+        position: relative;
+        width: 95%;
+        height: auto;
+        margin-left: 2.5%;
+        border-radius: 6px;
+
+        @include Tab {
+            width: 65%;
+            margin: 40px auto;
+        }
+
+        @include BigTab {
+            width: 55%;
+        }
+
+        @include Desktop {
+            width: 40%;
+        }
+
+        .invisible-box {
+            display: flex;
+            flex-direction: row;
+
+            .box {
+                text-indent: 5px;
+                line-height: 0;
+                width: 90%;
+                height: 40px;
+                color: #212121;
+                background: transparent;
+                margin-left: 2.5%;
+                border: none;
+                outline: none;   
+            }
+
+            ::placeholder {
+                font-family: Google-Medium;
+                color: #616161;
+                font-size: 1rem;
+                opacity: 0.8;
+
+                @include Tab {
+                    color: #424242 ;
+                }
+            }
+
+            .box-v {
+                display: none;
+            }
+
+            .title-icons {
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                justify-content: center;
+                margin-right: 5px;
+                padding-top: 5px;
+                line-height: 0;
+
+                .list-icons {
+                    padding: 0 15px;
+
+                    .check-box {    
+                        line-height: 0;
+                        color: #616161;
+                    }
+
+                    .brush {
+                        line-height: 0;
+                        color: #616161;
+                    }
+
+                    .image {
+                        line-height: 0;
+                        color: #616161;
+                    }
+                }
+            }
+
+            .title-icons-v {
+                display: none;
+            }
+        }
+
+        .title-box {
+            z-index: 45;
+
+            .title {         
+                text-indent: 4px;   
+                display: none;
+                width: 95%;
+                height: 50px;
+                font-family: Google-Medium;
+                color: #212121;
+                background: transparent;
+                margin-left: 2.5%;
+                margin-bottom: 10px;
+                border: none;
+                outline: none;
+                font-size: 1rem;
+                z-index: 40;    
+
+            }
+
+            ::placeholder {
+                color: #616161;
+                font-size: 1rem;
+                font-family: Google-Medium;
+            }
+
+            .title-v {
+                display: flex;
+                z-index: 55;
+            }
+        }
+
+        .note {             
+
+            .label {
+                text-indent: 4px;
+                width: 95%;
+                display: none;
+                font-family: Google-Medium;
+                color: #212121;
+                background: transparent;
+                margin-left: 2.5%;
+                border: none;
+                overflow: auto;
+                font-size: 0.9rem;
+                z-index: 50;  
+                outline: none;
+                margin-bottom: 10px;
+                resize: none;
+
+            }
+
+            ::placeholder {
+                color: #616161;
+                font-size: 0.9rem;
+                font-family: Google-Medium;
+            }
+
+            .expand {
+                display: flex;
+                height: auto;
+            }
+        }
+
+        .main-icons {
+            display: none;
+
+            @include Desktop {
+                padding-bottom: 10px;
+                padding-left: 10px;
+            }
+
+            .list-icons {
+                list-style: none;
+                padding: 0 10px;
+
+                @include Desktop{
+                    padding: 0 15px;
+                }
+
+                .icons {
+                    font-size: 16px;
+                    color: #616161;
+                }
+            }
+        }
+
+        .main-v {
+            display: flex;
+        }
+
+        .btn {
+            display: none;
+            justify-content: flex-end;  
+            margin-right: 20px;
+
+            @include Desktop {
+                position: absolute;
+                right: 0;
+                bottom: 5px;
+                cursor: pointer;
+            }
+            
+            .add {            
+                z-index: 150;
+                font-size: 0.9rem;
+                font-family: Google-Regular;
+                color: #616161;
+                background: transparent;
+                border: none;
+                margin: 5px 10px;
+                margin-bottom: 10px;         
+            }
+            
+            .close {
+                z-index: 150;
+                font-size: 0.9rem;
+                font-family: Google-Regular;
+                color: #616161;
+                background: transparent;
+                border: none;
+                margin: 5px 10px;
+                margin-bottom: 10px;
+            }
+
+            .more {                
+                position: relative;
+
+                .more-icon {
+                    margin-top: 4px;
+                    font-size: 20px;
+                    color: #616161;
+                }
+
+                .resets {
+                    display: none;
+                    position: absolute;
+                    top: 10px;
+                    right: 0;
+                    list-style: none;
+                    flex-direction: column;
+                    border-radius: 6px;
+                    width: 7rem;
+                    height: auto;
+                    padding: 10px 20px;
+                    background: white;
+                    box-shadow: 0 1px 3px rgba(63, 62, 62, 0.22), 0 1px 7px rgba(17, 16, 16, 0.24);
+        
+                    .op-list {    
+                        padding: 3px 0;
+                        font-size: 0.9rem;                     
+                        text-align: left;
+                        color: #616161;      
+                        font-weight: 600;
+
+                        @include Desktop {
+                            cursor: pointer;
+                        }
+                    }
+                }
+        
+                .vis {
+                    display: flex;
+                }
+            }
+        }
+
+        .v {
+            display: flex;
+        }
+    }
+
+    .light {
+        background: white;
+        box-shadow: 0 1px 3px rgba(63, 62, 62, 0.22), 0 1px 7px rgba(17, 16, 16, 0.24);
+    }
+
+    .dark {
+        background: #212121;
+        box-shadow: 0 0px 1px rgba(223, 221, 221, 0.973), 0 0px 2px rgb(252, 251, 251);
+
+        .invisible-box {
+
+            .box {
+                color: #212121;
+            }
+
+            ::placeholder {
+                color: #9e9e9e;
+            }
+        }
+
+        .title-box {
+            .title {            
+                color: white;
+            }
+
+            ::placeholder {
+                color: #9e9e9e ;
+            }
+        }
+
+        .note {
+            .label {
+                color: white;
+            }
+
+            ::placeholder {
+                color: #9e9e9e;
+            }
+        }
+
+        .main-icons {
+            .list-icons {
+                .icons {
+                    color: #eeeeee;
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .btn {
+            .add { 
+                color: #eeeeee;    
+            }
+            
+            .close {
+                color: #eeeeee;
+            }
+
+            .more {
+                .more-icon {
+                    color: #eeeeee;
+                }
+
+                .resets {
+                    background: #212121;
+                    box-shadow: 0 0px 1px rgba(223, 221, 221, 0.973), 0 0px 2px rgb(252, 251, 251);   
+                    .op-list {
+                        color: white;       
+                    }
+                }
+            }
+        }
+    }
+}

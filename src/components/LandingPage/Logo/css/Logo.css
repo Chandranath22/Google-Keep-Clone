@@ -1,12 +1,22 @@
+@font-face {
+  font-family: "Google-Medium";
+  src: url("../../../../assets/fonts/GoogleSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Google-Regular";
+  src: url("../../../../assets/fonts/GoogleSans-Regular.ttf");
+}
+
 header .landing-logo {
   padding-top: 20px;
   text-align: center;
   font-size: 1.5rem;
-  font-weight: bolder;
-  color: #212121;
+  font-family: Google-Regular;
+  color: #424242;
   background: white;
-  -webkit-box-shadow: 0 0 0 1px gray;
-          box-shadow: 0 0 0 1px gray;
-  height: 50px;
+  -webkit-box-shadow: 0 0 1px gray;
+          box-shadow: 0 0 1px gray;
+  height: 40px;
 }
 /*# sourceMappingURL=Logo.css.map */

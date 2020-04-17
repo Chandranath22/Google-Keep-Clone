@@ -63,7 +63,7 @@ class Cards extends React.Component {
                         <div className="more-options">
                             <i onClick = {this.onClickOption} className = "material-icons more-ver">more_vert</i>
                             <ul className={ !this.state.option ? "options" : "options vis"}>
-                                <li onClick = {this.props.onDelete} className="op-list">Delete note</li>
+                                <li onClick = {() => this.props.onDelete(this.props.id)} className="op-list">Delete note</li>
                             </ul>
                         </div>
                     </div>

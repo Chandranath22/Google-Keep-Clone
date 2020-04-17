@@ -14,6 +14,9 @@ const initialState = {
   logo: "Keep",
   dark: false,
   add: 0,
+  addNote: [],
+  addArchive: [],
+  addTrash: [],
   close: false,
   ham: false,
   more: false,
@@ -50,13 +53,42 @@ class App extends React.Component {
   }
 
   onAdd = () => {
+    this.setState({add: this.state.add + 1});
+    // console.log(this.state.add);
+    let newNote = {
+      id: this.state.add,
+      title: this.state.title,
+      body: this.state.body
+    }
     if (this.state.body.length > 0 && this.state.title.length > 0) {
-      this.setState({ add: this.state.add + 1 });
+      this.setState({ addNote: [...this.state.addNote, newNote ]});
     }
   }
 
-  onDelete = () => {
-    this.setState({ add: this.state.add - 1 });
+  onArchive = (id) => {
+    this.setState({add: this.state.add + 1});
+    let newArchive = {
+      id: this.state.add,
+      title: this.state.title,
+      body: this.state.body
+    }
+    if (this.state.body.length > 0 && this.state.title.length > 0) {
+    this.setState({ addArchive: [...this.state.addArchive, newArchive ]});
+    }
+  }
+  
+  onDelete = (id) => {
+    let deletedList = [...this.state.addNote];
+    let del;
+    for(let i = 0; i < deletedList.length; i++){
+      let obj = deletedList[i];
+      if(obj.id === id){
+        del = deletedList.splice(i, 1);
+        break;
+      }
+    } 
+    this.setState({addNote: [...deletedList]})
+    this.setState({addTrash: [...this.state.addTrash, del[0]]});
   }
 
   onClickHam = () => {
@@ -117,8 +149,10 @@ class App extends React.Component {
                     ?
                     <Main
                       dark={this.state.dark}
+                      list={this.state.addNote}
                       add={this.state.add}
                       onAdd={this.onAdd}
+                      onArchive = {this.onArchive}
                       onDelete={this.onDelete}
                       ham={this.state.ham}
                       title={this.state.title}
@@ -133,30 +167,32 @@ class App extends React.Component {
                     (
                       this.state.linkRoute === "Reminders"
                         ?
-                        <Reminder
-                          dark={this.state.dark}
-                          add={this.state.add}
-                          onAdd={this.onAdd}
-                          onDelete={this.onDelete}
-                          ham={this.state.ham}
-                          title={this.state.title}
-                          body={this.state.body}
-                          reset={this.state.more}
-                          linkRoute={this.linkRoute}
-                          onBodyChange={this.onBodyChange}
-                          onTitleChange={this.onTitleChange}
-                          onClickReset={this.onClickMore}
-                        />
+                        <Reminder/>
                         :
                         (
                           this.state.linkRoute === "Archive"
                             ?
-                            <Archive />
+                            <Archive 
+                              dark={this.state.dark}
+                              add={this.state.add}
+                              list={this.state.addArchive}
+                              ham={this.state.ham}
+                              title={this.state.title}
+                              body={this.state.body}
+                              onDelete={this.onDelete}
+                              linkRoute={this.linkRoute}
+                            />
                             :
-                            <Trash />
+                            <Trash 
+                              dark={this.state.dark}
+                              list={this.state.addTrash}
+                              ham={this.state.ham}
+                              title={this.state.title}
+                              body={this.state.body}
+                              linkRoute={this.linkRoute}
+                            />
                         )
                     )
-
                 }
               </main>
             </div>

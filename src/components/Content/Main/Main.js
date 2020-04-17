@@ -32,10 +32,6 @@ class Main extends React.Component {
         }
     }
 
-
-
-
-
     render() {
         return (
             <div>
@@ -63,7 +59,7 @@ class Main extends React.Component {
                             <li className = "list-icons"><i className = "material-icons icons">person_add</i></li>
                             <li className = "list-icons"><i className = "material-icons icons">palette</i></li>
                             <li className = "list-icons"><i className = "material-icons icons">crop_original</i></li>
-                            <li className = "list-icons"><i className = "material-icons icons">archive</i></li>
+                            <li className = "list-icons"><i className = "material-icons icons" onClick ={() => this.props.onArchive(this.props.add)}>archive</i></li>
                         </div>
 
                         <div className={!this.state.close ? "btn" : "btn v"}>
@@ -95,7 +91,8 @@ class Main extends React.Component {
                         body={this.props.body}
                         onDelete={this.props.onDelete}
                         onBodyChange={this.props.onBodyChange}
-                        onTitleChange={this.props.onTitleChange} />
+                        onTitleChange={this.props.onTitleChange}
+                    />
                 </main>
             </div>
         );
